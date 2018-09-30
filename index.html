@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>TEDx MNIT</title>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+		<link href='css/layout.css' rel='stylesheet' type='text/css'>
+		
+		<script>
+			$(document).ready(function(){
+				$(".main").onepage_scroll({
+					sectionContainer: "section",
+					responsiveFallback: 600,
+					loop: false
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="big_wrapper">
+			<div id="header">
+				<div class="logo">
+					<img src="images/logo.png" alt="TEDx MNIT Jaipur" width="200" height="50">
+				</div>
+				<div class="menu">
+					<ul class="h_list">
+						<li class="horizontal">
+							<ul class="v_list">
+								<li class="element"><a href="index.html">Home</a></li>
+							</ul>
+						</li>
+						<li class="horizontal">
+						<ul class="v_list">
+							<li class="element">Speaker Registration</li>
+						</ul>
+						</li>
+						<li class="horizontal">
+						<ul class="v_list">
+							<li class="element">Theme'18</li>
+							<li class="element">Theme'17</li>
+						</ul>
+						</li>
+						<li class="horizontal">
+						<ul class="v_list">
+							<li class="element">Speakers'18</li>
+							<li class="element">Speakers'17</li>
+						</ul>
+						</li>
+						<li class="horizontal">
+						<ul class="v_list">
+							<li class="element">Partners</li>
+							<li class="element">Team</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="main">
+				<section class="ted">
+					<br /><br /><br />
+					<img src="images/tedx.png" align="right" width=350 height=300>
+					<br />
+					<h1 class="heading">What is TED?</h1>
+					<p>TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</p>
+				</section>
+				
+				<section class="tedx">
+					<h1 class="heading">What is TEDx?</h1>
+					<p>
+					TEDx brings the spirit of TED’s mission of ideas worth spreading to local communities around the globe. TEDx events are organized by curious individuals who seek to discover ideas and spark conversations in their own community. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED.
+					</p>
+				</section>
+			</div>
+			
+			<div id="footer">
+				<div id="social">
+					<a href="https://www.facebook.com/TEDxMNITJaipur/" target="_blank"><img width=40 height=30 alt="fb" src="images/fb.png"></a>
+					<a href="https://www.instagram.com/tedxmnitjaipur/" target="_blank"><img width=40 height=30 alt="insta" src="images/insta.png"></a>
+				</div>
+				<div id="foot_txt">
+				This independent event is operated under license from TEDx.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
