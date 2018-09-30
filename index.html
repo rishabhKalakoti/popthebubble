@@ -1,14 +1,19 @@
 <html>
 	<head>
 		<title>TEDx MNIT</title>
-		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" href="flipclock.css" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="flipclock.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
 		<link href='css/layout.css' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 		
-		<script>
-			$(document).ready(function(){
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
 				$(".main").onepage_scroll({
 					sectionContainer: "section",
 					responsiveFallback: 600,
@@ -32,7 +37,7 @@
 						</li>
 						<li class="horizontal">
 						<ul class="v_list">
-							<li class="element">Speaker Registration</li>
+							<li class="element"><a href="speaker_reg.html">Speaker Registration</a></li>
 						</ul>
 						</li>
 						<li class="horizontal">
@@ -58,15 +63,53 @@
 			</div>
 			
 			<div class="main">
+				<section clas="countdown" width="100%">
+					<br /><br />
+					<h1 align="center">Countdown Timer</h1>
+					<div class="clock" style="margin-left:10%;z-index:2;color:white;" align="center"></div>
+					<h1 align="center" style="font-size:20px;color:grey;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Days
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Hours
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Minutes
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Seconds
+					</h1>
+					<hr style="width:100%;opacity:0.1">
+					<h1 align="center" style="font-size:40px;color:yellow;">19th January 2019</h1>
+					<script type="text/javascript">
+						var clock;
+
+						$(document).ready(function() {
+
+							var currentDate = new Date();
+
+							var futureDate = new Date(2019, 0, 19);
+							
+							var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+							
+							clock = $('.clock').FlipClock(diff, {
+								clockFace: 'DailyCounter',
+								countdown: true
+							});
+						});
+					</script>
+					
+				</section>
 				<section class="ted">
 					<br /><br /><br />
-					<img src="images/tedx.png" align="right" width=350 height=300>
+					<img src="images/tedx.png" align="right" width=350 height=300">
 					<br />
 					<h1 class="heading">What is TED?</h1>
 					<p>TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</p>
 				</section>
 				
 				<section class="tedx">
+					<br /><br /><br />
+					<img src="images/x.jpg" align="left" width=350 height=300">
+					<br />
 					<h1 class="heading">What is TEDx?</h1>
 					<p>
 					TEDx brings the spirit of TED’s mission of ideas worth spreading to local communities around the globe. TEDx events are organized by curious individuals who seek to discover ideas and spark conversations in their own community. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED.
