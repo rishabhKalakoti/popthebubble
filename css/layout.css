@@ -1,8 +1,7 @@
-@media screen and (min-width:1100px){
 	.body{
 		padding:0px;
 		margin:0px;
-		min-width:1100px;
+		//min-width:1100px;
 	}
 
 	#big_wrapper{
@@ -37,31 +36,31 @@
 	}
 
 	.menu{
+		padding-right:50px;
 		font-family:Calibry,Play, sans-serif!important;
 		font-weight:bold;
-		font-size:13px;
+		font-size:15px;
 		line-height:25px;
 		display:block;
-		width:750px;
+		//width:750px;
 		//min-width:800px;
 		float:right;
-	}
-
-	ul.h_list{
-		list-style:none;
 	}
 
 	ul.h_list li.horizontal{
 		display:block;
 	}
 
-	ul.v_list{
-		float:left;
+	ul.h_list{
+		width:100%;
 		position:relative;
-		display:block;
+		display:inline-text;
 		list-style:none;
 	}
-
+	li.element{
+		float:right;
+		margin-right:20px;
+	}
 	li.element:hover{
 		color:yellow;
 		animation:shake 0.1s;
@@ -139,4 +138,3 @@
 		width:48px;
 		height:38px;
 	}
-}

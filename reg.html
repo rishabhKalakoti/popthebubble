@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>TEDx MNIT</title>
+		<link rel="stylesheet" href="flipclock.css" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="flipclock.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+		<link href='css/layout.css' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+		
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+				$(".main").onepage_scroll({
+					sectionContainer: "section",
+					responsiveFallback: 600,
+					loop: false
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="big_wrapper">
+			<div id="header">
+				<div class="logo">
+					<img src="images/logo.png" alt="TEDx MNIT Jaipur" width="200" height="50">
+				</div>
+				<div class="menu">
+					<ul class="h_list">
+						<!--<li class="element">Speakers</li>-->
+						<!--<li class="element">Partners</li>-->
+						<li class="element"><a href="about.html">About</a></li>
+						<li class="element">Team</li>
+						<li class="element"><a href="index.html">Home</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="main">
+				<style>
+					input{
+						margin:5px;
+						height:25px;
+						border-radius:3px;
+						background-color:transparent;
+						border:1px solid white;
+						color:white;
+						width:250px;
+					}
+					input#submit{
+						background-color:white;
+						color: red;
+						font-weight:bold;
+						width:150px;
+					}
+					table,tr,td{
+						color:inherit;
+					}
+				</style>
+				<section class="form" style="width:100%;text-align:center;">
+					<br />
+					<h1 class="heading">Speaker Registration Form</h1>
+					<hr style="width:50%;opacity:0.5;"/>
+					<p style="text-align:center;">
+					<table style="margin:Auto;">
+					<form id="reg_form" name="reg_form" method="get" action="reg.php">
+						<tr><td>Name </td><td><input id="name" name="name" type="text" required></input></td></tr>
+						<tr><td>Phone </td><td><input id="phone" name="phone" type="phone"></input></td></tr>
+						<tr><td>Email </td><td><input id="email" name="email" type="email" required></input></td></tr>
+						<tr><td colspan=2 align="center"><input id="submit" type="button" value="Submit Details" onclick="submitForm();"></td></tr>
+					</form>
+					</table>
+					</p>
+					<script type="text/javascript">
+					function submitForm()
+					{
+						//alert("0");
+						var error,num,name,email;
+						error='';
+						num=document.getElementById("phone").value;
+						name=document.getElementById("name").value;
+						email=document.getElementById("email").value;
+						if( name ==='' || email ===''){
+							error="Please fill all fields...!!!!!!";
+						}else if (isNaN(num) || num < 1000000000 || num > 9999999999) {
+							error = "Phone number invalid";
+						}
+						if(error=='')
+						{
+							//document.forms["reg_form"].submit();
+							//document.getElementById("reg_form").submit();
+						}
+						else
+						{
+							document.getElementById("msg").innerHTML=error;
+						}
+					}
+					</script>
+					<div id="msg" style="align:center;width:100%;">
+					
+					</div>
+				</section>
+			</div>
+			
+			<div id="footer">
+				<div id="social">
+					<a href="https://www.facebook.com/TEDxMNITJaipur/" target="_blank"><img width=40 height=30 alt="fb" src="images/fb.png"></a>
+					<a href="https://www.instagram.com/tedxmnitjaipur/" target="_blank"><img width=40 height=30 alt="insta" src="images/insta.png"></a>
+				</div>
+				<div id="foot_txt">
+				This independent event is operated under license from TEDx.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
