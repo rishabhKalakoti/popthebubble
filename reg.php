@@ -1,3 +1,61 @@
+<?php
+
+	require('PHPMailer/PHPMailer.php');
+	require('PHPMailer/SMTP.php');
+	require('PHPMailer/Exception.php');
+
+	// email phone name
+	$message='';
+	$name='';
+	$email='';
+	$phone='';
+	if(isset($_POST['name']) && isset($_POST['email']))
+	{
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		
+		if(empty($name) && empty($email))
+		{
+			$message = "Name and email required.";
+		}
+		else if(!preg_match("/^[a-zA-Z ]*$/",$name))
+		{
+			$message = "Invalid name";
+		}
+		else
+		{
+			$mail = new PHPMailer\PHPMailer\PHPMailer();;                
+			try {
+				
+				$mail->SMTPDebug = 2;          
+				$mail->isSMTP();               
+				$mail->Host = 'smtp.gmail.com';
+				$mail->SMTPAuth = true;                             
+				$mail->Username = 'rishabh.kalakoti@gmail.com';     
+				$mail->Password = 'Percy@3538';                     
+				$mail->SMTPSecure = 'tls';                          
+				$mail->Port = 587;                                  
+
+				$mail->setFrom('rishabh.kalakoti@gmail.com', 'Mailer');
+				$mail->addAddress('rishabh.kalakoti@gmail.com');     
+				
+				$mail->isHTML(true);                                
+				$mail->Subject = 'TEDxMNITJaipur Speaker Registration';
+				$mail->Body    = "Name:".$name."<br>Email:".$email."<br>Phone:".$phone;
+				$mail->AltBody = "Name:".$name." Email:".$email." Phone:".$phone;
+
+				$mail->send();
+				$message= 'Your details have been sent. Thank You.';
+				header('Location: reg.php?q=1');
+			} catch (Exception $e) {
+				$message =  'Details could not be sent.';
+			}
+		}
+	}
+?>
+
+
 <html>
 	<head>
 		<title>TEDx MNIT</title>
@@ -67,41 +125,17 @@
 					<hr style="width:50%;opacity:0.5;"/>
 					<p style="text-align:center;">
 					<table style="margin:Auto;">
-					<form id="reg_form" name="reg_form" method="get" action="reg.php">
-						<tr><td>Name </td><td><input id="name" name="name" type="text" required></input></td></tr>
-						<tr><td>Phone </td><td><input id="phone" name="phone" type="phone"></input></td></tr>
-						<tr><td>Email </td><td><input id="email" name="email" type="email" required></input></td></tr>
-						<tr><td colspan=2 align="center"><input id="submit" type="button" value="Submit Details" onclick="submitForm();"></td></tr>
+					<form id="reg_form" name="reg_form" method="POST" action="reg.php">
+						<tr><td>Name </td><td><input id="name" name="name" type="text" required><?php $name?></input></td></tr>
+						<tr><td>Phone </td><td><input id="phone" name="phone" type="phone"><?php $phone?></input></td></tr>
+						<tr><td>Email </td><td><input id="email" name="email" type="email" required><?php $email?></input></td></tr>
+						<tr><td colspan=2 align="center"><input id="submit" type="submit" value="Submit Details"></td></tr>
 					</form>
 					</table>
 					</p>
-					<script type="text/javascript">
-					function submitForm()
-					{
-						//alert("0");
-						var error,num,name,email;
-						error='';
-						num=document.getElementById("phone").value;
-						name=document.getElementById("name").value;
-						email=document.getElementById("email").value;
-						if( name ==='' || email ===''){
-							error="Please fill all fields...!!!!!!";
-						}else if (isNaN(num) || num < 1000000000 || num > 9999999999) {
-							error = "Phone number invalid";
-						}
-						if(error=='')
-						{
-							//document.forms["reg_form"].submit();
-							//document.getElementById("reg_form").submit();
-						}
-						else
-						{
-							document.getElementById("msg").innerHTML=error;
-						}
-					}
-					</script>
 					<div id="msg" style="align:center;width:100%;">
-					
+						<?php echo $message;?>
+						<?php if(isset($_GET['q'])) echo 'Your details have been sent. Thank You.'; ?>
 					</div>
 				</section>
 			</div>
