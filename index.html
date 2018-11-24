@@ -4,7 +4,6 @@
 		<link rel="stylesheet" href="flipclock.css" type="text/css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="flipclock.js"></script>
-		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
 		<link href='css/layout.css' rel='stylesheet' type='text/css'>
@@ -29,9 +28,41 @@
 					direction: 'both'
 				});
 			});
+			
+			
+			$(document).ready(function () {
+			  // preloader
+			  $(window).load(function(){
+				$('.preloader').delay(400).fadeOut(500);
+			  })
+			 
+			})
 		</script>
 	</head>
 	<body>
+		<div class="preloader"><span class="preloader-gif"></span></div>
+		<style type='text/css'>
+	.preloader{
+		position: fixed;
+		top:0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		background: #000;
+		z-index: 99999;
+	}
+	 
+	.preloader .preloader-gif{
+		display: block;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -40px 0 0 -40px;
+		background: url('images/132.gif') no-repeat;   
+	}
+	</style>
 		<div id="big_wrapper">
 			<div id="header">
 				<div class="logo">
@@ -128,8 +159,36 @@
 					</script>
 					
 				</section>
+				<!--
 				<section>
 					<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8&font=Default&lang=en&start_at_end=true&initial_zoom=2&height=500' width='100%' height=500 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+				</section>
+				-->
+				
+				<section style='font-size:0.8em;'>
+				  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+				  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.abril-droidsans.css">
+				  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+				  <div id='timeline-embed' style="width: 100%; height: 500px"></div>
+				  <script type="text/javascript">
+					// The TL.Timeline constructor takes at least two arguments:
+					// the id of the Timeline container (no '#'), and
+					// the URL to your JSON data file or Google spreadsheet.
+					// the id must refer to an element "above" this code,
+					// and the element must have CSS styling to give it width and height
+					// optionally, a third argument with configuration options can be passed.
+					// See below for more about options.
+					
+					var additionalOptions = {
+					  start_at_end: true,
+					  default_bg_color: {r:0, g:0, b:0},
+					  timenav_height: 150
+					}
+					
+					timeline = new TL.Timeline('timeline-embed',
+					  'https://docs.google.com/spreadsheets/d/1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8/edit#gid=0', additionalOptions);
+				  </script>
 				</section>
 			</div>
 			

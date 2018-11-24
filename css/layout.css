@@ -4,6 +4,11 @@ body{
 	
 }
 
+default{
+	margin:0px;
+	padding:0px;
+}
+
 #big_wrapper{
 	background-color:black;
 	color:white;
