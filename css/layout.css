@@ -4,7 +4,7 @@ body{
 	
 }
 
-default{
+default div{
 	margin:0px;
 	padding:0px;
 }
@@ -71,7 +71,7 @@ li.element{
 	margin-right:20px;
 }
 li.element a{
-	color:yellow;
+	color:white;
 	text-decoration:none;
 }
 li.element a:hover{
