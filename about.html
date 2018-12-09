@@ -3,9 +3,9 @@
 		<title>TEDx MNIT</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<script src="jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
 		
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
@@ -23,6 +23,9 @@
 				});
 			});
 		</script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div id="big_wrapper">
@@ -43,30 +46,48 @@
 			
 			<div class="main">
 				<style type="text/css">
+				
 				.ted{
-					padding:10%;
-				}				
+					font-family: Montserrat, sans-serif;
+					padding:10px;
+				}
+				.tedx{
+					font-family: Montserrat, sans-serif;
+					padding:20px;
+				}
+				h1.heading{
+					font-family: Montserrat, sans-serif;
+					font-size:30px;
+				}
+				p.txt{
+					padding:10px;
+					//font-family: Montserrat, sans-serif;
+					font: 400 15px/1.8 Lato, sans-serif;
+				}	
 				</style>
-				<section class="ted">
+				<section class="ted" >
+					<div class='container'>
 					<br /><br /><br />
-					<img src="images/tedx.png" align="right" width=350 height=300">
+					<img src="images/tedx.png" align="right" width=350 height=320>
 					<br />
 					<h1 class="heading">What is TED?</h1>
-					<p>TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. It believes passionately in the power of ideas to change attitudes, lives and, ultimately, the world. TED stands for Technology, Entertainment, and Design. This huge revolution began in 1984   as a conference, and as the time passed by, it covered almost every field of life science to business to global issues that were covered in more than 110 languages.
-					</p>
-					<p>
+					<p class='txt'>
+					TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world. It believes passionately in the power of ideas to change attitudes, lives and, ultimately, the world. TED stands for Technology, Entertainment, and Design. This huge revolution began in 1984   as a conference, and as the time passed by, it covered almost every field of life science to business to global issues that were covered in more than 110 languages.
+					</p><p class='txt'>
 					In taking the conference as a nonpartisan, nonprofit devoted to spreading ideas, usually in the form of short, subtle yet powerful enough talks, Anderson stood by the principles that made TED great: the inspired format, the breadth of content, the commitment to seek out the most interesting people on Earth and let them communicate their passion.TED conferences and events continue to inspire, motivate and thrill attendees.
 					</p>
+					</div>
 				</section>
 				
 				<section class="tedx">
+					<div class='container'>
 					<br /><br /><br />
 					<img src="images/x.jpg" align="left" width=350 height=300">
 					<br />
 					<h1 class="heading">What is TEDx?</h1>
-					<p>
-					 TEDx was created in the spirit of TED's mission, "ideas worth spreading." It supports independent organizers who want to conduct TED-like events to enlighten their local community with thoughts to discover new ideas and provide platform to present them,  are organized independently under a free license granted by TED.
-					</p>
+					<p class='txt'>
+					 TEDx was created in the spirit of TED's mission, "ideas worth spreading." It supports independent organizers who want to conduct TED-like events to enlighten their local community with thoughts to discover new ideas and provide platform to present them,  are organized independently under a free license granted by TED.</p>
+					</div>
 				</section>
 			</div>
 			
