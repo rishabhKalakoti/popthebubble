@@ -113,26 +113,30 @@
 				top: 50%;
 				left: 50%;
 				margin: -40px 0 0 -40px;
-				background: url('images/132.gif') no-repeat;
+				//background: url('images/132.gif') no-repeat;
 				
 			}
 		</style>
 		<div id="big_wrapper">
-			<div id="header">
-				<div class="logo">
-					<img src="images/logo.png" alt="TEDx MNIT Jaipur" width="200" height="50">
-				</div>
-				<div class="menu">
-					<ul class="h_list">
-						<!--<li class="element">Speakers</li>-->
-						<!--<li class="element">Partners</li>-->
-						<li class="element"><a href="about.html">About</a></li>
-						<li class="element"><a href='team.html'>Team</a></li>
-						<li class="element"><a href="index.html">Home</a></li>
-						
-					</ul>
-				</div>
+			<nav class="header navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="menu navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <a class="navbar-brand" href="#"><img src='images/logo.jpg' height=35></a>
 			</div>
+			<div class=" collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="team.html">Team</a></li> 
+				<li><a href="about.html">About</a></li> 
+			  </ul>
+			</div>
+		  </div>
+		</nav>
 			<script type='text/javascript'>
 			// Set the date we're counting down to
 			var countDownDate = new Date("Jan 19, 2019 00:00:00").getTime();
