@@ -1,0 +1,17 @@
+<body bgcolor="black">
+<link title="timeline-styles" rel="stylesheet" href="timeline3/css/timeline.css">
+<link title="timeline-styles" rel="stylesheet" href="timeline3/css/fonts/font.abril-droidsans.css">
+
+<script src="timeline3/js/timeline.js"></script>
+
+<div id='timeline-embed' style="width: 100%; height: 500px; margin:0px;padding:0px;"></div>
+<script type="text/javascript">
+var additionalOptions = {
+  start_at_end: true,
+  default_bg_color: {r:0, g:0, b:0},
+  timenav_height: 150
+}
+
+timeline = new TL.Timeline('timeline-embed',
+  'https://docs.google.com/spreadsheets/d/1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8/edit#gid=0', additionalOptions);
+</script>

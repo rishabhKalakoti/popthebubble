@@ -33,7 +33,7 @@ section{
 	background-repeat:no-repeat !important;
 	background-position:-150px 0px !important;
 	*/
-	background-color:black!important;
+	background-color:rgba(0,0,0,0.5)!important;
 }
 
 a{
@@ -147,5 +147,5 @@ h1.heading{
 }
 #social img:hover{
 	//border-color:yellow;
-	
+	filter:sepia(100%);
 }
