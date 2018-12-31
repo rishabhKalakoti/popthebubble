@@ -1,7 +1,7 @@
 body{
 	padding:0px;
 	margin:0px;
-	
+	background-color:black;
 }
 
 default div{
@@ -87,7 +87,7 @@ li.element#active{
 	position:absolute;
 	//max-width:900px;
 	margin:auto;
-	min-width:500px;
+	//min-width:500px;
 	//margin-bottom:20px;
 }
 .main p{
@@ -114,7 +114,7 @@ h1.heading{
 	width:100%;
 	z-index:10;
 	margin:auto;
-	border-top:1px solid rgba(255,255,255,0.5);
+	//border-top:1px solid rgba(255,255,255,0.5);
 	background-color:rgba(0,0,0,0.5);
 	clear:both;
 	position:absolute;
