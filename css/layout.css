@@ -14,7 +14,7 @@ default div{
 	color:white;
 	width:100%;
 	height:100%;
-	z-index:-2;
+	z-index:10;
 }
 
 section{
@@ -23,7 +23,8 @@ section{
 
 .header{
 	width:100%;
-	z-index:20;
+	//position:fixed;
+	z-index:50;
 	color:white;
 	font-family:Calibry,Play, sans-serif!important;
 	font-weight:bold;
@@ -82,9 +83,9 @@ li.element#active{
 }
 
 .main{
-	z-index:1;
+	z-index:10;
+	text-align:center;
 	width:100%;
-	position:absolute;
 	//max-width:900px;
 	margin:auto;
 	//min-width:500px;
@@ -112,12 +113,12 @@ h1.heading{
 #footer{
 	clear:both;
 	width:100%;
+	//position:fixed;
 	z-index:10;
 	margin:auto;
 	//border-top:1px solid rgba(255,255,255,0.5);
 	background-color:rgba(0,0,0,0.5);
 	clear:both;
-	position:absolute;
 	color:white;
 	display:inline-text;
 	padding:10px;

@@ -13,10 +13,10 @@
 		
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
-		
+		<!--
 		<link rel="stylesheet" type="text/css" href="css/jquery.funnyText.css">
 		<script type="text/javascript" src="scripts/jquery.funnyText.js"></script>
-		
+		-->
 		<link rel="stylesheet" href="bubbles/css/style.css">
 		
 		
@@ -29,6 +29,7 @@
 					responsiveFallback: 600,
 					loop: false
 				});
+				/*
 				$('.mySelector').funnyText({
 					speed: 600,
 					borderColor: 'yellow',
@@ -37,6 +38,7 @@
 					fontSize: '3em',
 					direction: 'both'
 				});
+				*/
 			});
 			
 			
@@ -227,8 +229,9 @@
 			<div class=" collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="speakers.html">Speakers</a></li> 
 				<li><a href="team.html">Team</a></li> 
-				<li><a href="about.html">About</a></li> 
+				<li><a href="about.html">About</a></li>
 			  </ul>
 			</div>
 		  </div>
@@ -253,6 +256,11 @@
 			</script>
 			<div class="main">
 				<style type='text/css'>
+					@media only screen and (max-width: 700px) {
+					  #timeline {
+						display:none;
+					  }
+					}
 					.box{
 						display:inline-block;
 					}
@@ -298,10 +306,10 @@
 					</div>
 					
 				</section>
-				<section>
+				<section id='timeline'>
 					<!--
 					<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8&font=Default&lang=en&start_at_end=true&initial_zoom=2&height=500' width='100%' height=500 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>-->
-					<iframe style="margin:0px;" src='timeline.html' width='100%' height=550 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+					<iframe style="margin:0px;" src='timeline.html' width='100%' height='80%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 				</section>
 			</div>
 			
