@@ -118,6 +118,7 @@ h1.heading{
 	color:white;
 	display:inline-text;
 	padding:10px;
+	padding-top:0px;
 	vertical-align:text-bottom;
 	//border-top:1px solid rgba(255,255,255,0.2);
 	bottom:0px;

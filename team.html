@@ -18,13 +18,14 @@
 		<link href='css/layout.css' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 		<link rel="stylesheet" href="bubbles/css/style.css">
-		
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	</head>
 	<body>
 	<div class="bubbles"></div>
 <script  src="bubbles/js/index.js"></script>
 		<div id="big_wrapper">
-		<nav class="header navbar navbar-inverse">
+		<nav class="header navbar navbar-inverse" style='position:fixed;'>
 		  <div class="container-fluid">
 			<div class="menu navbar-header">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -75,12 +76,12 @@
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Organiser</h3>
 							  <img class='teampic1' src='images/team/astha.jpg'>
-							  <br><font color='yellow' size='+1'>Astha Mary John</font><br>asthajohn97@gmail.com
+							  <br><font color='yellow' size='+1'>Astha Mary John</font>
 							  </div>
 							  <div class="col-sm-4 photo_holder">
 							  <h3 class='post'>Co-organiser</h3>
 							  <img class='teampic1' src='images/team/batty.jpg'>
-							  <br><font color='yellow' size='+1'>Rishabh Gupta</font><br>battyatcs@gmail.com
+							  <br><font color='yellow' size='+1'>Rishabh Gupta</font>
 							  </div>
 							  <div class="col-sm-2"></div>
 							</div>
@@ -93,19 +94,101 @@
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Public relations</h3>
 							  <img class='teampic2' src='images/team/gauri.jpg'>
-							  <br><font color='yellow' size='+1'>Gauri Bathla</font><br>gauribathlas@gmail.com
+							  <br><font color='yellow' size='+1'>Gauri Bathla</font>
 							  </div>
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Design</h3>
 							  <img class='teampic2' src='images/team/vaibhav.jpg'>
-							  <br><font color='yellow' size='+1'>Vaibhav Kushwaha</font><br>kushvaibhav@gmail.com
+							  <br><font color='yellow' size='+1'>Vaibhav Kushwaha</font>
 							  </div>
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Technical</h3>
 							  <img class='teampic2' src='images/team/percy.jpg'>
-							  <br><font color='yellow' size='+1'>Rishabh Kalakoti</font><br>rishabh.kalakoti@gmail.com
+							  <br><font color='yellow' size='+1'>Rishabh Kalakoti</font>
 							  </div>
 							</div>
+					</div>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('.slider').slick({
+							  infinite: true,
+							  arrows: true,
+							  lazyLoad: 'ondemand',
+							  slidesToShow: 4,
+							  slidesToScroll: 4
+							});
+						});
+					  </script>
+					  <div class='container-fluid' style='color: red;'><h2 align='center'>EXECUTIVES</h2></div>
+					<style>
+						.slider{
+							width:60%; margin:auto;
+						}
+						.nav-content{
+							text-align:center;
+						}
+						.exec-photo{
+							margin:auto;
+							clear:both;
+							height:150px;
+							width:120px;
+							min-width:60px;
+							border:1px solid white;
+						}
+					</style>
+					<div class='slider'>
+						<div class='nav-content'>
+							<img class=' exec-photo' src='images/team/nandini.jpg'>
+							Nandini Agarwal
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/pratibha.jpg'>
+							Pratibha Yadav
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/ekansh.jpg' alt='ex1'>
+							Ekansh Choudhary
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/shubham.jpg' alt='ex1'>
+							Shubham Jajoo
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/anand.jpg' alt='ex1'>
+							Anand
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/parag.jpg' alt='ex1'>
+							Parag
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/aruthra.jpg' alt='ex1'>
+							Aruthra
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/yash.jpg' alt='ex1'>
+							Yash
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/ayushman.jpg' alt='ex1'>
+							Ayushman
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/kartikey.jpg' alt='ex1'>
+							Kartikey
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/jayant.jpg' alt='ex1'>
+							Jayant
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/pranshu.jpg' alt='ex1'>
+							Pranshu
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/monarch.jpg' alt='ex1'>
+							Monarch
+						</div>
 					</div>
 					<br><br><br><br>
 			</div>
@@ -115,10 +198,14 @@
 					<a href="https://www.facebook.com/TEDxMNITJaipur/" target="_blank"><img width=40 height=30 alt="fb" src="images/fb.png"></a>
 					<a href="https://www.instagram.com/tedxmnitjaipur/" target="_blank"><img width=40 height=30 alt="insta" src="images/insta.png"></a>
 				</div>
+				<!--
 				<div id="foot_txt">
 				This independent event is operated under license from TEDx.
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
 </html>

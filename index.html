@@ -224,7 +224,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span> 
 			  </button>
-			  <a class="navbar-brand" href="home.html"><img src='images/logo.jpg' height=35></a>
+			  <a class="navbar-brand" href="index.html"><img src='images/logo.jpg' height=35></a>
 			</div>
 			<div class=" collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav navbar-right">
@@ -238,7 +238,7 @@
 		</nav>
 			<script type='text/javascript'>
 			// Set the date we're counting down to
-			var countDownDate = new Date("Jan 19, 2019 00:00:00").getTime();
+			var countDownDate = new Date("Mar 10, 2019 00:00:00").getTime();
 			var x = setInterval(function() {
 			var now = new Date().getTime();
 			var distance = countDownDate - now;
@@ -247,7 +247,7 @@
 			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-				document.getElementById("clock").innerHTML = "<table cellspacing='2' class='count'><tr><th>" +days+ "<th>" + hours + "<th>" + minutes + "<th style='border-right:none;'>" + seconds + "<tr><td>Days<Td>Hours<Td>Minutes<td>Seconds</table>";
+				document.getElementById("clock").innerHTML = "<table cellspacing='2' class='count'><tr><th>" +days+ "<th>:<th>" + hours + "<th>:<th>" + minutes + "<th>:<th>" + seconds + "<tr><td>Days<td> <Td>Hours<td> <Td>Minutes<td> <td>Seconds</table>";
 			  if (distance < 0) {
 				clearInterval(x);
 				document.getElementById("clock").innerHTML = "THE TIME IS NOW!!!";
@@ -269,35 +269,55 @@
 						margin:auto;
 						
 					}
+					.clock{
+						padding:10px;
+					}
 					.count th{
-						border-right:1px solid white;
+						//border-right:1px solid white;
 						//border-left:1px solid white;
 						text-align:center;
 						min-width:60px;
 						font-size:2em;
 						padding:2px;
-						margin:5px;
+						padding-top:6px;
 					}
 					.count td{
 						min-width:60px;
 						margin:2px;
 						text-align:center;
-						font-size:0.8em;
+						font-size:1.0em;
 						padding:2px;
 					}
 					.countdown{
 						background-position: center top;
 						background-repeat:no-repeat;
 						background-size:auto;
+						vertical-align:center;
+						padding-top:10%;
 					}
 				</style>
 				<section class="countdown" width="100%">
 					
+					<div class="container" style='z-index:10;'>
+					<div class="" style="width:60%; height:50%; z-index:10;margin:auto;padding:auto;">
+						<div class="">
+							<!--<h6>TEDx MNIT Jaipur</h6>-->
+							<h1 class="text-white" style=''>
+								<font color='red'>TEDx</font> MNIT Jaipur				
+							</h1>
+								<span style='padding:5px;margin:10px;background-color:#8ab92d;color:white;font-weight:bold;'>Starts in:</span>
+								<div id="clock" class=""></div>
+							<h4>Date: <span style='color:#8ab92d'>10th March, 2019</span></h4>
+							<h4>Venue: <span style='color:#8ab92d'>Neeti Sabhagar, MNIT Jaipur</span></h4>
+							
+						</div>											
+					</div>
+				</div>
 				</section>
 				<section id='timeline'>
 					<!--
 					<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8&font=Default&lang=en&start_at_end=true&initial_zoom=2&height=500' width='100%' height=500 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>-->
-					<iframe style="margin:0px;" src='timeline.html' width='100%' height='80%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+					<iframe style="margin:0px;" src='timeline.html' width='100%' height='85%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 				</section>
 				<style type="text/css">
 				
@@ -311,7 +331,7 @@
 				}
 				h1.heading{
 					font-family: Montserrat, sans-serif;
-					font-size:30px;
+					font-size:25px;
 				}
 				p.txt{
 					padding:10px;
@@ -319,15 +339,16 @@
 					font: 400 16px/1.8 Lato, sans-serif;
 				}	
 				</style>
-<section class="theme">
+<section class="theme" style='overflow:auto;'>
 					<div class='container'>
+					<img src='images/main.jpg' style="float:left;margin:20px;min-width:200px;width:30%;" class='img-responsive'>
 					<h1 class="heading">Theme: Pop the Bubble</h1>
 					<p class='txt'>
-					With the evolution of the earth, the humans have claimed to be the most cerebral species, reasoning their ability to communicate. With this comprehension came a lot of concerns. Not only we were high-grade at formulating our ideas; we ended up inflicting them on the masses. As a result, we have created a bubble around us, made up of prejudices, shortsightedness, uncertainties, vulnerabilities or insecurities.<br>
-					The youth- often molded or stuffed in a box named prototype is stuck in the never-ending loop of monotony, and we believe it is high time we come out of the clouds which are shrouding us in the darkness of ignorance.<br>
+					With the evolution of the earth, the humans have claimed to be the most cerebral species, reasoning their ability to communicate. With this comprehension came a lot of concerns. Not only we were high-grade at formulating our ideas; we ended up inflicting them on the masses. As a result, we have created a bubble around us, made up of prejudices, shortsightedness, uncertainties, vulnerabilities or insecurities. 
+					The youth- often molded or stuffed in a box named prototype is stuck in the never-ending loop of monotony, and we believe it is high time we come out of the clouds which are shrouding us in the darkness of ignorance.
 					This theme is open for interpretation and resonates with every individual - whether it be leaving say a family business to discover one's passion to realizing one's sexuality in say a conservative society to even uncovering a dying art form.
-					This talk aims to start a conversation and strip away labels like taboo and unconventional. It strives to explore the world on the outside and the world within.<br>
-					The beauty of the theme is its multifacetedness since everyone can somehow resonate with it and this theme would beautifully bind technology, entertainment, and design.
+					This talk aims to start a conversation and strip away labels like taboo and unconventional. It strives to explore the world on the outside and the world within. 
+					The beauty of the theme is its multifacetedness since everyone can somehow resonate with it and this theme would beautifully bind technology, entertainment, and design. 
 					TEDxMNITJaipur 2019 seeks to pop this bubble. The idea is to break free the intended audience, majorly the youth - often blinded by the herd mentality, trapped in the cocoon weaved meticulously over the years by the blind and closed minded society and sometimes even our insecurities and shortsightedness that obstruct them to find their true calling.  It strives to explore the world on the outside and the world within.
 					</p>
 					</div>
@@ -340,9 +361,11 @@
 					<a href="https://www.facebook.com/TEDxMNITJaipur/" target="_blank"><img width=40 height=30 alt="fb" src="images/fb.png"></a>
 					<a href="https://www.instagram.com/tedxmnitjaipur/" target="_blank"><img width=40 height=30 alt="insta" src="images/insta.png"></a>
 				</div>
+				<!--
 				<div id="foot_txt">
 				This independent event is operated under license from TEDx.
 				</div>
+				-->
 			</div>
 		</div>
 	</body>
