@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Basic Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+            <div  data-b3d-viewport data-b3d-viewport-input >
+
+                <ul data-b3d-path-slider="itemRotation:{y:'-90deg'}" >
+                    <li><img data-b3d-image-tile src="images/tiles/image1.jpg" title='Image 1'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+                </ul>
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Basic Example</h1>
+                <p>This example shows the basic default appearance (no setup properties) for lights, camera and a slider.</p>
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

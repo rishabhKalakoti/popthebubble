@@ -38,7 +38,7 @@ body {
   background-image: linear-gradient(to top, #222, #000);
   */
   z-index:0;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   top:0px;
   bottom:0px;
@@ -49,7 +49,7 @@ body {
 }
 
 .bubble-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index:0;
   will-change: transform;

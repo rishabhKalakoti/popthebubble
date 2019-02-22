@@ -70,8 +70,12 @@
 					  slidesToScroll: 1,
 					  arrows: true,
 					  fade: true,
-					  asNavFor: '.slider-nav'
+					  cssEase:'linear',
+					  speed:500,
+					  lazyLoad:'ondemand'
+					  /*asNavFor: '.slider-nav'*/
 					});
+					/*
 					$('.slider-nav').slick({
 					  slidesToShow: 3,
 					  slidesToScroll: 1,
@@ -80,41 +84,53 @@
 					  centerMode: true,
 					  focusOnSelect: true,
 					  arrows: true
-					});
+					});*/
 				});
 			  </script>
 			  <style>
+				p.txt{
+					font-family: Montserrat, sans-serif;
+					padding:10px;
+					font-size:16px;
+				}
+				h4{
+					font-size:1.2em;
+				}
+				h3{
+					font-size:1.5em;
+					color:yellow;
+				}
+				/*
 			  	.slick-dots{
 			  		display:block;
 			  		width:20px;
 			  		height:6px;
 			  		background-color:white;
 			  		border: 1px solid white;
-			  	}
+			  	}*/
 			  	.slider-for{
+			  		width:80%;
+			  		margin:auto;
 			  		padding:0px;
 			  	}
 			  	.slider-nav{
 			  		padding:5px;
 			  	}
 			  	.slider-content{
-			  		padding:10px;
-			  		height:350px;
 			  		overflow:auto;
 			  		margin:0px;
-			  		border: 2px solid white;
+			  		//border: 2px solid white;
 			  	}
 			  	.nav-content{
 			  		padding:0px;
 			  		border: 1px solid white;
 			  		margin:5px;
-			  		height:120px;
+			  		height:20%;
 			  	}
 			  	img.speaker-big{
-			  		margin:5px;
-			  		float:left;
-			  		width:200px;
-			  		height:300px;
+			  		margin:auto;
+			  		width:60%;
+			  		min-width:200px;
 			  	}
 			  	img.speaker-small{
 			  		margin:10px;
@@ -124,53 +140,38 @@
 			  	}
 			  </style>
 			<div class="main">
+				<br><br><br>
 				<div class='speaker-details' style='width:90%;margin:auto; align:center;padding:0px;'>
 					<div class='slider-for'>
 						<div class='slider-content'>
-							<img class='speaker-big img-responsive'>
-<p>Purvadhanashree has worked for a decade in promoting a rare classical dance of Telegu devdasis, vilasini Natyam which was performed in temples and royal courts.<br>
-Vilasini Natyam was traditionally performed in the temples as a ritual, in the royal courts for the aesthetic pleasure of royalty and the general public as a form of infotainment. As all the Devadasi dance forms went through the renaissance period, this art also went through an awkward stage of rejection, doubt, and criticism. Social, political, religious and artistic reasons did not allow this art to thrive and it went into oblivion for several decades till Guru Swapnasundari worked towards bringing it back.
-Purvadhanashree has worked for over a decade in promoting this rare classical dance of Telegu devdasis and busting the myths around them. Her dedicated efforts to sustain and further it is reaping rich results both through her own performances as well as those of the dancers she is training.<br>
-Purvadhanashree  is also "TOP grade ” Bharatanatyam artiste of Doordarshan
-Critics and connoisseurs consider Purvadhanashree as one of the outstanding classical dancers of the younger generation. From 2000 to 2014 she learnedVilasiniNatyam under Padmabhushan Guru Swapnasundari.   Sahitya Kala Parishad, Delhi selected Purva under the Young Talent Scholarship in the year 2002.<br>
-For the achievement in the field of VilasiniNatyam, Central SangeetNatakAkademi awarded Purvadhanashree theUstadBismillah Khan YuvaPuraskar in 2008. She is an impaneled artiste of SPIC MACAY and has been regularly conducting workshops and Lecture demonstrations across the country. In 2015 Bhanja Kala Mandap, Bhubaneshwar honoredPurva with the JayadevPuraskar. And in2016 she was awarded the Devadasi Sashimani Devi SmritiPuraskar in the 11th Devadasi National Dance Festival, Bhubaneshwar. </p>
+							<img data-lazy='images/speakers/1.jpeg' alt='speaker1' class='speaker-big img-responsive'><!--
+<p class='txt'>Purvadhanashree has worked for a decade in promoting a rare classical dance of Telegu devdasis, vilasini Natyam which was performed in temples and royal courts. Purvadhanashree is also "TOP grade ” Bharatanatyam artiste of Doordarshan. Sahitya Kala Parishad, Delhi selected Purva under the Young Talent Scholarship in the year 2002. For the achievement in the field of Vilasini Natyam, Central Sangeet Natak Akademi awarded Purvadhanashree the Ustad Bismillah Khan Yuva Puraskar in 2008. She is an impaneled artiste of SPIC MACAY and has been regularly conducting workshops and Lecture demonstrations across the country. In 2015 Bhanja Kala Mandap, Bhubaneshwar honored Purva with the Jayadev Puraskar. And in 2016 she was awarded the Devadasi Sashimani Devi Smriti Puraskar in the 11 the Devadasi National Dance Festival, Bhubaneshwar.</p>-->
 						</div>
-						<div class='slider-content'>your content 2</div>
-						<div class='slider-content'>your content 3</div>
+						<div class='slider-content'><img data-lazy='images/speakers/2.jpeg' class='speaker-big img-responsive'><!--<p class='txt'>From being an army officer to a successful entrepreneur, Major Vandana Sharma has left no stone unturned. Her service to India by working in the Indian Army for a decade is phenomenal. She has also played a significant role in the Kargil war in 1999. She also realized her affinity towards entrepreneurship. Her project, the StartupPeopleConsulting was established in 2017. It majorly works in helping fresh entrepreneurs with problems they encounter and in offering professional guidance. She directs her works towards women empowerment and also aspires to help the veterans of armed forces.</p>-->
+						</div>
+						<div class='slider-content'><img data-lazy='images/speakers/3.jpg' class='speaker-big img-responsive'><!--<p class='txt'>Dr. Abhas Mitra is an Indian astrophysicist who was the former head of the Theoretical Physics section of the Bhabha Atomic Research Centre (BARC), Mumbai. His research papers proved the concept of “Black holes” as illusory. He also exerted that he had solved this paradox long before Stephan Hawking did. His research also proved that the concept of “Dark energy” is delusional. A 90- year old cosmological puzzle was named as “MITRA PARADOX” to honor his work in theoretical physics. He is also an eminent TEDx speaker who has delivered 8 TEDx talks to-date in various reputed institutes. He’s indeed an inspiration to all the young scientists trying to put the name of India high up in the list of scientifically developed countries.</p>--></div>
 						<div class='slider-content'>
-<img class='speaker-big img-responsive'>
-<p>	
-Being a 'fellow' of a society is an achievement of great pride for any individual, it's society and country as a whole. Dr. Pragya Agarwal, a social and creative entrepreneur, has brought this honor to her country by being awarded a fellowship of 'Royal Society of Arts' because of her hard work and dedication towards gender equality. She is a devoted educator and campaigner for women's rights encouraging young women to follow their passion. She has organized the first-ever TEDxWomen conference in the North of the UK and founder and Licensee of TEDx FombyPointWomen.<br>
-She believes in the value of creativity to drive innovation and focusses on developing blue-skies thinking, resilience and critical decision-making skills. As a creative strategist, she is also a business mentor and has created two award-winning businesses.<br>
-Ph.D. from the University of Nottinghamshire is an active writer and is currently writing a book for Bloomsbury Publications. She is also a freelance writer for Forbes, Huffington Post, Telegraph and many others. Besides writing, she is an engaging orator. She had given two deeply motivating TEDx talks and provides 1:1 mentoring session for crafting a story for TEDx talks. She has been invited to lecture at various Universities in the USA, Australia, Chile, and Europe.<br>
-Having a very successful career in academia, Pragya has published widely and has been on international conference committees and editorial boards. She has also been a consultant on various European Union Projects. Pragya's research has always been interdisciplinary, crossing boundaries between science, technology and the arts. <br>
-She has received flame and glory on a large scale. She has been featured in The Guardian, Metro, Telegraph, Independent, Glamour Magazine, Stylist Magazine and has appeared as a guest on BBC breakfast and radio 4.<br>
-She is regarded as one of the 100 most influential women in social enterprise in the UK. Dr. Pragya Agarwal has popped the bubble of an age-old myth of the inability of women to perform in various field by excelling in all of them</p>
+<img  data-lazy='images/speakers/4.jpg' class='speaker-big img-responsive'>
+<!--<p class='txt'>Dr. Pragya Agarwal, a social and creative entrepreneur, has brought honor to her country by being awarded a fellowship of 'Royal Society of Arts' for her work towards gender equality. She is a devoted educator and campaigner for women's rights and has organized the first-ever TEDxWomen conference in the North of the UK, and founder and Licensee of TEDx FombyPointWomen. Ph.D. from the University of Nottinghamshire, Dr. Pragya is a writer for Forbes, Huffington Post, Telegraph and many others and is currently writing a book for Bloomsbury Publications. Featured in The Guardian, Metro, Telegraph, Independent, Glamour Magazine, Stylist Magazine and guest on BBC breakfast and radio four among others, she is one of the 100 most influential women in social enterprise in the UK.</p>-->
 						</div>
 						
-						<div class='slider-content'><img class='speaker-big img-responsive'><p>
-It is very aptly said that the purpose of life is to live a life of purpose. This justifies the success journey of Mr. Anubhav Dubey, co-founder of Chai Sutta Bar, a leading food venture with over 15 outlets and still expanding. Anubhav is a social entrepreneur and works towards the welfare of orphans by providing them mainly with employment and indirectly with a family with whom they work.<br>
- At the young age of 22, Anubhav Dubey, with his college friends, Anand Nayak, and  Rahul Gothi came up with an ordinary idea with the extraordinary potential to enter the market with their meager budget socially and environment-friendly start-up CSB.
-The team of chai sutta bar purposely includes orphans to improve their financial stability and also the lifestyle. Their primary emphasis is to employ orphans who are capable of handling the work. <br>
- Their serving style is considerably different from that of the others. The setup also focusses on hygiene and environment issues and promotes the use of “Kulhads”(earthen cups) instead of plastic cups, thus generating a pollution free environment, and as they are used only once, they are very hygienic. The high amount of usage of Kulhads by Chai Sutta Bar has also increased the employment ratio of the kulhad artisans.
- Earlier, they had only seasonal employment that is at the time of Diwali. But now have got the opportunity of earning regularly. CSB had helped them fight with the struggle of sending their kids to school and have made their condition betters.<br>
- Anubhav Dubey has bagged various awards for young entrepreneurs and is currently preparing for UPSC along with managing his business to extend his devotion towards the welfare of the society at a much authoritative position. He was invited to the i5 summit organized as a joint venture by IIT-IIM Indore twice.<br>
-He has successfully popped the bubble of the myth that there is an age of specific things especially when they are for the goodwill of the society. He has achieved great heights at such a young age. The country is in great need of such youth at this time.
-</p>
+						<div class='slider-content'><img data-lazy='images/speakers/5.jpg' class='speaker-big img-responsive'>
+						<!--
+						<p class='txt'>Mr. Anubhav Dubey, the co-founder of Chai Sutta Bar, a leading food venture with over 15 outlets and still expanding, is a social entrepreneur. With the extraordinary potential to enter the market with their meager budget socially and environment-friendly start-up, the team of chai sutta bar purposely includes orphans to improve their financial stability and also the lifestyle. Their serving style promotes the use of “Kulhads” and generating a pollution free environment.   Anubhav Dubey has bagged various awards for young entrepreneurs and is currently preparing for UPSC along with managing his business to extend his devotion towards the welfare of the society at a much official position. He was invited to the i5 summit organized as a joint venture by IIT-IIM Indore twice.
+</p>-->
 						</div>
-						<div class='slider-content'>your content 6</div>
 					</div>
+					<!--
 					<div class='slider-nav'>
 						<div class='nav-content'>
-						<!--<img class='speaker-small'>-->
-							Speaker 1 <br> Purvadhanshree
+							<h4>Speaker 1</h4> <h3> Purvadhanshree</h3>
 						</div>
-						<div class='nav-content'>Speaker 2</div>
-						<div class='nav-content'>Speaker 3</div>
-						<div class='nav-content'>Speaker 4 <br> Dr. Pragya Agarwal</div>
-						<div class='nav-content'>Speaker 5 <br> Anubhav Dubey</div>
-						<div class='nav-content'>Speaker 6</div>
+						<div class='nav-content'><h4>Speaker 2</h4><h3>Vandana Sharma</h3></div>
+						<div class='nav-content'><h4>Speaker 3</h4><h3>Dr. Prabhas Mitra</h3></div>
+						<div class='nav-content'><h4>Speaker 4</h4><h3>Dr. Pragya Agarwal</h3></div>
+						<div class='nav-content'><h4>Speaker 5</h4><h3> Anubhav Dubey</h3></div>
 					</div>
+					-->
 				</div>
 			</div>
 			

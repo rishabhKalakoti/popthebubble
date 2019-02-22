@@ -1,0 +1,125 @@
+
+
+
+.bling3d-show-if-webgl,
+.bling3d-show-if-not-webgl,
+.bling3d-show-if-webgl.bling3d-webgl-false,
+.bling3d-show-if-not-webgl.bling3d-webgl-true
+{
+    display:none;
+}
+
+.bling3d-show-if-webgl.bling3d-webgl-true,
+.bling3d-show-if-not-webgl.bling3d-webgl-false
+{
+    display:block;
+}
+
+
+
+[data-b3d-viewport] {
+    position:relative;
+    
+    /* Disable default touch actions of IE and Edge. */
+    -ms-touch-action:pan-y;
+    /* Other browsers. */
+    touch-action:pan-y;
+
+    /* Disable text selection and related pop-ups. */
+    /* Elements can enable selection individually. */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   
+ 
+    width:100%;
+    /*
+        Set padding for prortional scaling.
+        Vertical padding percent is based on width, not height.
+        Here we use 43% (100/2.35) for 2.35:1 ratio.
+    */    
+    padding-bottom:43%;    
+    height:0px;   /* Height is made up by the padding. */
+
+    overflow:hidden;    /* hide scroll bars. */
+}
+
+/* Initially hide everything in the viewport. */
+[data-b3d-viewport] > * {
+    visibility:hidden;
+}
+
+/*
+    Reveal everything again when viewport is ready.
+    The WebGL canvas will be on top of everthing at this point.
+*/
+.bling3d-ready[data-b3d-viewport] > * {
+    visibility:visible;
+}
+
+/* The WebGL canvas. */
+.bling3d-canvas {
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+
+.bling3d-composer {
+    position:absolute;
+    padding:5px;
+    left:3px;top:3px;
+    background-color: rgba(0,0,0,0.50);
+    border:1px solid #444;
+    color:#fff;
+    font-family: monospace;
+    font-size: 12px;
+    
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select:text;
+}
+
+
+/* Spinning loader effect. */
+@keyframes spin {
+    to {transform: rotate(360deg); }
+}
+ 
+@-webkit-keyframes spin {
+    to {-webkit-transform: rotate(360deg);}
+}
+
+.bling3d-spinner {
+	width:50px;
+	height:50px;
+	position:absolute;
+	top: 20%;	
+	left: 50%;
+	margin-left:-25px;
+	border-radius: 50%;
+	border: 6px solid transparent;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+	
+	-webkit-animation: spin .7s ease-in-out infinite;
+	animation: spin .7s ease-in-out infinite;
+        visibility:visible;
+}
+
+/* Pre-fade setup */
+.bling3d-reveal-setup {
+    opacity:0;
+}
+/* Fade-in reveal effect for viewport. */
+.bling3d-ready[data-b3d-viewport] {
+   opacity: 1;
+   transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+ }

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Switch Camera</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+        <style>
+            /* Styles for camera select options. */
+            #cams {
+                position:absolute;
+                left:32px;
+                top:32px;
+                z-index:100;
+                color:#fff;
+            }
+            input[type=radio]  {
+                transform: scale(2);
+                margin-bottom:24px;
+                margin-right:16px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+            <div  data-b3d-viewport="alpha:true,fogColor:0x888888,fogNear:4,fogFar:16" data-b3d-viewport-input='composerx:true'>
+
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[ 0.0000,1.3374,4.4581 , 0.0000,0.0000,0.0000]"></span>
+                <span data-b3d-camera ="name:'close',posTarg:[0.0, 0.6721,3.9692 , 0.0, 0.1390,0.0145]"></span>
+                <span data-b3d-camera ="name:'far',posTarg:[  0.0, 5.3329,12.4672 , 0.0, 0.1390,0.0145]"></span>
+                <span data-b3d-camera ="name:'upwards',posTarg:[0.2261,0.0368,3.8305 , -0.5930,1.6466,0.3493]"></span>
+                <span data-b3d-light = "color:0xdddddd"></span>
+                <span data-b3d-light = "type:'directional', color:0x333333,py:100,pz:100" ></span>
+
+                <div id='title-area'></div>
+
+                <span data-b3d-color-dome="bottomColor:0x888888, topColor:0x000000" data-b3d-no-reflection></span>
+
+
+                <ul
+                    data-b3d-path-slider="itemRotation:{y:-90}"
+                    data-b3d-title-text="selector:'#title-area'"
+                    >
+                    <li>
+                        <img data-b3d-image-tile="shadowPath: 'images/shadow.png',originY:-1, frameColor:0xfefefe, depth:0.05" data-b3d-as-default src="images/tiles/image1.jpg" title='Image 1'>
+                    </li>
+
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+                </ul>
+
+                <span data-b3d-lens-flare="src:'images/flare.png', size:800, color:0xdddddd,py:22,pz:-20,px:5.2" >
+                    <span data-b3d-lens-flare="src:'images/flare-small.png', size:60, offset:0.5, color:0x222222 " data-b3d-as-default></span>
+                    <span data-b3d-lens-flare="size:70, offset:0.6"></span>
+                    <span data-b3d-lens-flare="size:120, offset:0.8"></span>
+                    <span data-b3d-lens-flare="size:70, offset:0.9"></span>
+                </span>
+                <span data-b3d-mirror-floor="opacity:1, color:0xdddddd"></span>
+
+                <div id ="cams">
+                    <input data-b3d-change-camera="triggerEvent:'change'" data-b3d-as-default checked type="radio" name="cam" value="defaultCamera">Default<br>
+                    <input data-b3d-change-camera type="radio" name="cam" value="close">Close<br/>
+                    <input data-b3d-change-camera type="radio" name="cam" value="far">Far<br/>
+                    <input data-b3d-change-camera type="radio" name="cam" value="upwards">Upwards Skew
+                </div>
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Switch Cameras</h1>
+                <p>Camera angles can be changed by assigning different cameras to <code>select</code> elements or other HTML elements which are selected by clicking them.</p>
+                <p>Sliders can also define their own cameras, so that an appropriate camera is automatically selected when switching between sliders.</p>
+                <p>Cameras are defined by six values: the first three (x,y,z) are the position of the camera in the scene, the next three are the target position in the scene that the camera looks at.</p>
+                <p>For example, these values would define a camera above the ground that looks down at a point in the distance:</p>
+                <p><code>[0,5,0, 0,0,-6]</code></p>
+
+
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+

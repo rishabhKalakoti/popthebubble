@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Basic Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+
+            <div data-b3d-viewport="clearColor:0x666666" data-b3d-viewport-input="composerx:true">
+                <span data-b3d-light='color:0x999999'></span>
+                <span data-b3d-camera="name:'defaultCamera',posTarg:[0.0144,2.9069,-2.4531 , 0.0145,0.0109,-2.4751]"></span>
+
+                <ul
+                    data-b3d-path-slider="path:'openCurve', swipeSpeed:0.8,points:[-3,0,0, -2.7716,0,-1.1481, -2.1213,0,-2.1213, -1.1481,0,-2.7716, 0,0,-3, 1.1481,0,-2.7716, 2.1213,0,-2.1213, 2.7716,0,-1.1481, 3,0,0], itemRotation:{x:-90,z:-90}"  >
+                    <li>
+                        <img data-b3d-image-tile="originY:-1" data-b3d-as-default src="images/tiles/image1.jpg" title='Image 1'>
+                    </li>
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+                </ul>
+
+
+                <ul
+                    data-b3d-path-slider="path:'openCurve',swipeSpeed:0.8,points:[-1.55,0,0, -1.432,0,-0.5932, -1.096,0,-1.096, -0.5932,0,-1.432, 0,0,-1.55, 0.5932,0,-1.432, 1.096,0,-1.096, 1.432,0,-0.5932, 1.55,0,0],  itemRotation:{x:-90,z:-90,y:0}"  >
+                    <li>
+                        <img data-b3d-image-tile src="images/tiles/image1.jpg" title='Image 1'>
+                    </li>
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>2D Examples</h1>
+
+                <p>2D sliders can be more elaborate than just straight lines. Here we have defined a couple of circular paths for a fan effect.</p>
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+

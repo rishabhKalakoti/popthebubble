@@ -1,0 +1,17 @@
+/*
+    Bling3D 1 Domain License (B301-01) TRIAL VERSION.
+    Version 1.0 REV 1602241545
+    Please purchase an appropriate license to use this software.
+    License Agreement: www.starplugins.com/license
+    Copyright (c)2012-2015 Star Plugins - www.starplugins.com
+    
+    Downloaded on Feb 22, 2019 by account #TRIAL USER
+    License Key: N/A
+    Licensed website(s): tedxmnitjaipur.com
+*/
+(function(){var e=void 0!==window.Bling3D?window.Bling3D:{};Bling3D={version:"1.0 REV 1602241545",autoStart:!0,spinnerClass:"bling3d-spinner",dataNamespace:"b3d",forceNoWebGl:!1,files:["https://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.js","js/Bling3D.core.js"],Callbacks:{makeCaller:function(a){a.callback=this.callback;a.addCallback=this.addCallback;a.removeCallback=this.removeCallback},callback:function(a,c,b){if(this._callbacks&&void 0!==this._callbacks[a])for(var d=0;d<this._callbacks[a].length;d++)b=
+this._callbacks[a][d],b.context[b.callback](a,c)},addCallback:function(a,c,b){this._callbacks||(this._callbacks={});void 0===this._callbacks[a]&&(this._callbacks[a]=[]);b||(b="handleCallback");this._callbacks[a].push({context:c,callback:b})},removeCallback:function(a,c){for(var b=this._callbacks[a].length-1;0<=b;b--)this._callbacks[a][b].context===c&&this._callbacks[a].splice(b,1)}},deltaT:0,webGL:!1,webglDetect:function(){if(Bling3D.forceNoWebGl)return!1;try{var a=document.createElement("canvas");
+return!!window.WebGLRenderingContext&&(a.getContext("webgl")||a.getContext("experimental-webgl"))}catch(c){return!1}},addFiles:function(){for(var a=0;a<arguments.length;a++)this.files.push(arguments[a])},onDomLoaded:function(a){document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1);Bling3D.callback("BLING3D_DOM_LOADED",{});a()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===
+document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),Bling3D.callback("BLING3D_DOM_LOADED",{}),a())})},loadFiles:function(a,c){for(var b=0,d=0,e=a.length;d<e;d++){var f=document.createElement("script");f.setAttribute("type","text/javascript");f.async=!1;f.defer=!0;f.onload=function(){b++;b===a.length&&(c&&c(),Bling3D.callback("BLING3D_ALL_FILES_LOADED"))};f.setAttribute("src",a[d]);document.getElementsByTagName("head")[0].appendChild(f)}},addSpinner:function(a){a.innerHTML+=
+"<div class='"+Bling3D.spinnerClass+"'></div>"},removeSpinner:function(a){var c=a.querySelector("."+Bling3D.spinnerClass);c&&a.removeChild(c)},hideAndShow:function(a){a=a.querySelectorAll(".bling3d-show-if-webgl, .bling3d-show-if-not-webgl, .bling3d");var c="bling3d-webgl-false";Bling3D.webglDetect()&&(c="bling3d-webgl-true");for(var b=0;b<a.length;b++)a[b].className=a[b].className+" "+c}};for(var d in e)Bling3D[d]=e[d];Bling3D.Callbacks.makeCaller(Bling3D);if(Bling3D.callbacks)for(e=Bling3D.callbacks,
+d=0;d<e.length;d+=2)Bling3D.addCallback(e[d],e[d+1]);Bling3D.onDomLoaded(function(){Bling3D.hideAndShow(document);if(Bling3D.webglDetect()){Bling3D.callback("BLING3D_WEBGL_TRUE");var a=document.querySelectorAll("[data-"+Bling3D.dataNamespace+"-viewport]");if(Bling3D.autoStart)for(var c=0;c<a.length;c++)Bling3D.addSpinner(a[c]);Bling3D.loadFiles(Bling3D.files,function(){new Bling3D.Main;Bling3D.callback("BLING3D_READY");if(Bling3D.autoStart)for(var b=0;b<a.length;b++)Bling3D.Viewport.init(a[b])})}else Bling3D.callback("BLING3D_WEBGL_FALSE")})})();

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>This is a title</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+        <style>
+    /* Styles for navigation buttons. */
+    [data-b3d-nav-button] {
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index:10;
+
+        padding:2.2% 1.2%;
+        border:none;
+        box-shadow: 1px 1px 3px rgba(0,0,0,1);
+
+        background-color: rgba(1,1,1,0.5);
+
+        outline-width: 0;
+        color: #fff;
+        font-weight: bold;
+        font-size:3vw;
+    }
+    [data-b3d-nav-button]:hover {
+        background-color: #f44;
+    }
+    #nav1 {
+        left:0px;
+        border-top-right-radius:10%;
+        border-bottom-right-radius:10%;
+        box-shadow: 1px 1px 3px rgba(0,0,0,1);
+    }
+    #nav2 {
+        right: 0px;
+        border-top-left-radius:10%;
+        border-bottom-left-radius:10%;
+        box-shadow: -1px 1px 3px rgba(0,0,0,1);
+    }
+</style>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+            
+<div
+    data-b3d-viewport="clearColor:0xffffff, fogColor:0xffffff"
+    data-b3d-viewport-input="composerx:true"
+
+    >
+    <span data-b3d-camera ="name:'defaultCamera',posTarg:[0.0656,0.5198,-0.6975 , 0.2313,0.5169,-1.0150]"></span>
+    <span data-b3d-light = "color:0xcccccc"></span>
+    <span data-b3d-light = "type:'directional', color:0x444444, py:100,pz:100" ></span>
+    <div id='title-area'></div>
+
+    <span data-b3d-color-dome="bottomColor:'white', topColor:0x87CEFA" data-b3d-no-reflection></span>
+
+    <ul
+        data-b3d-path-slider="path:'openCurve',points:[-7,0,0, 0,0,-2, 7,0,0], looping:false, itemRotation:{y:'-90deg'}, firstBound:0.5,lastBound:0.5 "
+        data-b3d-title-text="selector:'#title-area'"
+        >
+        <li>
+            <img data-b3d-image-tile="shadowPath: 'images/shadow.png', originY:-1, depth:0.05, frameColor:0xfefefe" data-b3d-as-default src="images/tiles/image1.jpg" title='Image 1'>
+        </li>
+
+        <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+        <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+        <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+
+    </ul>
+
+    <span data-b3d-mirror-floor="src:'images/floor.png', opacity:0.91, color:0xffffff, imageRepeatX:16, imageRepeatY:16"></span>
+    <button id="nav1" data-b3d-nav-button="direction:1">&#10094;</button>
+    <button id="nav2" data-b3d-nav-button="direction:-1">&#10095;</button>
+</div>
+        
+            <div id="bottom-area">  
+                <h1>Navigation Buttons</h1>
+<p>As well as touch, mouse and wheel navigation, any HTML element can be designated as a navigation button.</p>
+<p>The button style is entirely controlled via CSS.</p>
+
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

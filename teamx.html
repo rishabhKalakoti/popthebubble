@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Cover Flow Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+
+            <div data-b3d-viewport="clearColor:0xC5DBF2, fogColor:0xC5DBF2" data-b3d-viewport-input="composerx:true">
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[-0.0177,0.3494,2.0173 , -0.4475,0.6273,-0.0212]"></span>
+                <span data-b3d-light = "color:0xcccccc"></span>
+                <span data-b3d-light = "type:'directional', color:0x444444, py:100,pz:100" ></span>
+                <div id='image-title-area'></div>
+
+                <span data-b3d-color-dome="topColor:0x3F83CC, bottomColor:0xC5DBF2" data-b3d-no-reflection></span>
+
+                <ul
+                    data-b3d-path-slider="path:'line',points:[-6,0,0, 6,0,0], itemRotation:{y:-90}, moveToPrimary:true"
+                    data-b3d-coverflow data-b3d-title-text="selector:'#image-title-area', attribute:'alt'" >
+                    <li>
+                        <img src="images/team/astha.jpg" alt="Astha Mary John" 
+                             data-b3d-image-tile="originY:-1, shadowPath:'images/shadow.png', frameColor:0xfefefe, depth:0.05"
+                             data-b3d-as-default >
+
+                    </li>
+                    <li><img src="images/team/batty.jpg" alt='Rishabh Gupta' data-b3d-image-tile></li>
+                    <li><img src="images/team/gauri.jpg" alt='Gauri' data-b3d-image-tile></li>
+                    <li><img src="images/team/percy.jpg" alt='Rishabh Kalakoti' data-b3d-image-tile></li>
+                    <li><img src="images/team/pulkit.jpg" alt='Pulkit Indora' data-b3d-image-tile></li>
+                    <li><img src="images/team/vaibhav.jpg" alt='Vaibhav Kushwaha' data-b3d-image-tile></li>
+
+
+                </ul>
+                <span data-b3d-mirror-floor="src:'images/floor.png', opacity:0.9, imageRepeatX:32, imageRepeatY:32"></span>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
+
+
+

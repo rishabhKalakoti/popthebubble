@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>This is a title</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+
+            <div  data-b3d-viewport="fogColor:0xFF5B25, clearColor:0xFF5B25"
+                  data-b3d-viewport-input="composerx:true"
+                  >
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[-1.1721,0.5127,-1.0099 , -1.1681,0.5126,-1.0159]"></span>
+                <span data-b3d-light = "color:0xcccccc"></span>
+                <span data-b3d-light = "type:'directional', color:0x444444, py:100,pz:100" ></span>
+                <div id='title-area'></div>
+
+                <span data-b3d-color-dome="topColor:0x735573, bottomColor:0xFF5B25" data-b3d-no-reflection></span>
+
+
+                <ul
+                    data-b3d-path-slider="path:'openCurve', points: [ 2,0,-10, 0,0,-8, 0,0,0], itemRotation:{y:-45}, primaryOffset:0.86, moveToPrimary:true"
+                    data-b3d-title-text="selector:'#title-area'"
+                    >
+                    <li>
+                        <img data-b3d-image-tile="shadowPath: 'images/shadow.png', depth:0.05, frameColor:0xfefefe, originY:-1, itemFrameColor:0xfefefe" 
+                             data-b3d-as-default                        src="images/tiles/image1.jpg"
+                             title='Image 1'>
+                    </li>
+
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+
+                </ul>
+
+                <span data-b3d-mirror-floor="src:'images/floor.png', color:0xffffff, opacity:0.9,  imageRepeatX:32, imageRepeatY:32"></span> 
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Looping Items</h1>
+                <p>This slider has been setup to loop infinitely.</p>
+                <p>This is useful in situations where you would prefer a straight slider and have many objects to scroll through.</p>
+
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>This is a title</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+        <style>
+            /* CSS override for half-width viewports. */
+            [data-b3d-viewport] {
+                width:50%;
+                float:left;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+            <div 
+                data-b3d-viewport="clearColor:0xffffff, fogColor:0xefefef"
+                data-b3d-viewport-input="composerx:true" >
+
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[ -6.5853,0.5016,1.1028 , -5.1683,0.5026,-2.4134]"></span>
+                <span data-b3d-light = "color:0xcccccc"></span>
+                <span data-b3d-light = "type:'directional', color:0x444444, py:100,pz:100" ></span>
+                <div id='title-area'></div>
+
+                <span data-b3d-color-dome="bottomColor:0xefefef, topColor:0x87CEFA" data-b3d-no-reflection></span>
+
+
+                <ul 
+                    data-b3d-path-slider="path:'line',points: [-7,0,0, 7,0,0], itemRotation:{y:-90}"
+                    data-b3d-title-text="selector:'#title-area'"
+                    >
+                    <li>
+                        <img data-b3d-image-tile="shadowPath: 'images/shadow.png', originY:-1, depth:0.05, frameColor:0xfefefe" data-b3d-as-default src="images/tiles/image1.jpg" title='Image 1'>
+                    </li>
+
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+
+                </ul>
+
+                <span data-b3d-mirror-floor="src:'images/floor.png', opacity:1, color:0xdddddd, imageRepeatX:16, imageRepeatY:16"></span>
+
+            </div>
+
+            <div 
+                data-b3d-viewport="clearColor:'#666666', fogColor:'#666666', fogNear:3, fogFar:10"
+                data-b3d-viewport-input="composerx:true" 
+
+                >
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[0.0000,1.1615,3.8716 , 0.0000,0.0000,0.0000]"></span>
+                <span data-b3d-light = "color:0xdddddd"></span>
+                <span data-b3d-light = "type:'directional', color:0x666666, py:100,pz:100" ></span>
+                <div id='title-area'></div>
+
+                <span data-b3d-color-dome="bottomColor:'#666666', topColor:'black'" data-b3d-no-reflection></span>
+
+
+                <ul data-b3d-path-slider="points:[2,2], itemRotation:{y:-90}" >
+
+                    <li><img data-b3d-image-tile="originY:-1,depth:0.05, frameColor:'#888883',shadowPath:'images/shadow.png'" data-b3d-as-default 
+                             src="images/tiles/image12.jpg"  alt="Image 11"
+                             >
+                    </li>
+                    <li><img data-b3d-image-tile src="images/tiles/image12.jpg"  alt="Image 12"></li>
+
+
+                    <li><img data-b3d-image-tile src="images/tiles/image13.jpg"  alt="Image 13"></li>
+
+
+                    <li><img data-b3d-image-tile src="images/tiles/image14.jpg"  alt="Image 14"></li>
+
+
+                    <li><img data-b3d-image-tile src="images/tiles/image15.jpg"  alt="Image 15"></li>
+
+
+                </ul>
+
+                <span data-b3d-mirror-floor="src:'images/floor.png', opacity:0.9, color:'#dddddd', imageRepeatX:32, imageRepeatY:32"></span>
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Multiple Viewports</h1>
+                <p>Have as many Bling3D viewports as you like. Wherever you can place a <code>div</code> element, you can place a viewport with a different scene, sliders and other 3D objects.</p>
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

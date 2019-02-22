@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Simple Text Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+
+            <div 
+                data-b3d-viewport="clearColor:0xffffff, fogColor:'#9CC5E5'"
+                data-b3d-viewport-input="composerx:true"
+
+                >
+                <span data-b3d-camera ="name:'defaultCamera',posTarg:[0.3043,1.1795,3.7745 , 1.3615,-0.0120,-0.1708]"></span>
+                <span data-b3d-light = "color:0xcccccc"></span>
+                <span data-b3d-light = "type:'directional', color:0x444444, py:100,pz:100" ></span>
+                <div id='title-area'></div>
+
+                <span data-b3d-color-dome="bottomColor:'#9CC5E5', topColor:'#588BC2' " data-b3d-no-reflection></span>
+
+                <div data-b3d-node="ry:-90,px:3.5,py:-0.05,pz:0">
+                    <a href="#1">
+                        <h1 data-b3d-flat-text="textCanvasScale:1/275, textCanvas:{ color:'#444',backColor:'transparent',size:100}, originY:-1,originX:-1" data-b3d-as-default>New Products</h1>
+                    </a>
+
+                    <a href="#2">
+                        <h1 data-b3d-flat-text="py:0.5" >Old Products</h1>
+                    </a>
+
+                    <a href="#3">
+                        <h1 data-b3d-flat-text="py:1" >More Products</h1>
+                    </a>
+
+                </div>
+                <ul
+
+                    data-b3d-path-slider="points:[2.1,2.1], itemRotation:{y:-90}, px:0.2,moveToPrimary:true"
+                    data-b3d-title-text="selector:'#title-area'"
+                    >
+                    <li>
+                        <img  alt='Product 1 $100' data-b3d-image-tile="textAttribute:'alt',textCanvas:{backColor:'rgba(0,0,0,0.25)',color:'white',align:'center',padY:5},shadowPath: 'images/shadow.png', originY:-1, depth:0.05, frameColor:0xfefefe" data-b3d-as-default src="images/tiles/image1.jpg">
+                    </li>
+
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" alt='Product 2 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" alt='Product 3 $100' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" alt='Product 4 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" alt='Product 5 $100'></li>
+                    <li data-b3d-image-tile >
+                        <img src="images/tiles/image6.jpg" alt='Was $100&#10;Now $50'>
+                        <p data-b3d-flat-text="width:0.75,originY:-1,py:1,px:-0.75/2,textCanvas:{lineHeight:90,padX:5,size:85,style:'italic',weight:'bold',color:'white', backColor:'#cc0000'}">SALE!</p>
+                    </li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" alt='Product 7 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" alt='Product 8 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" alt='Product 9 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" alt='Product 10 $100'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" alt='Product 11 $100'></li>
+
+                </ul>
+
+                <span data-b3d-mirror-floor="src:'images/floor.png', opacity:0.91, color:0xffffff, imageRepeatX:16, imageRepeatY:16"></span>
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Simple Text</h1>
+                <p>Bling 3D provides basic text handling, allowing you to place text labels around the 3D scene or attach to other objects.</p>
+                <p>You can modify the font, size and colours.</p>
+
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+

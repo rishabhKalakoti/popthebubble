@@ -23,7 +23,7 @@ section{
 
 .header{
 	width:100%;
-	//position:fixed;
+	position:absolute;
 	z-index:50;
 	color:white;
 	font-family:Calibry,Play, sans-serif!important;
@@ -83,13 +83,13 @@ li.element#active{
 }
 
 .main{
+	position:absolute;
 	z-index:10;
 	text-align:center;
 	width:100%;
 	//max-width:900px;
 	margin:auto;
 	//min-width:500px;
-	//margin-bottom:20px;
 }
 .main p{
 	text-align:justify;
@@ -102,10 +102,6 @@ li.element#active{
 	margin:20px;
 }
 
-section{
-	height:100%;
-}
-
 h1.heading{
 	color:yellow;
 	font-size:1.2em;
@@ -113,7 +109,7 @@ h1.heading{
 #footer{
 	clear:both;
 	width:100%;
-	//position:fixed;
+	position:fixed;
 	z-index:10;
 	margin:auto;
 	//border-top:1px solid rgba(255,255,255,0.5);

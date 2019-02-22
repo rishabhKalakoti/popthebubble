@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Basic Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+        <script>
+
+            Bling3D.MatrixText = function (id, fontSize) {
+                this.drawFlag = 0;
+                this.canvas = document.getElementById(id);
+                this.fontSize = fontSize;
+                this.columns = Math.floor(this.canvas.width / fontSize);
+                this.yPositions = [];
+                for (var i = 0; i < this.columns; i++)
+                    this.yPositions[i] = 0;
+                this.ctx = this.canvas.getContext('2d');
+                this.ctx.fillStyle = 'black';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+                var self = this;
+
+                this.charCanvas = document.createElement("CANVAS");
+                var str = this.str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@?<>!\"$%^&*()[]{}\\";
+                this.charCanvas.width = str.length * fontSize;
+                this.charCanvas.height = fontSize;
+                var ctx = this.charCanvas.getContext('2d');
+                this.charCanvasContext = ctx;
+
+                // Predraw all characters into a canvas buffer for quicker drawing later.
+                // Because predrawn, can add glow etc. without worrying about performance.
+                for (var i = 0; i < str.length; i++) {
+                    ctx.font = fontSize + 'px Menlo-Regular, Droid Sans Mono, monospace';
+                    ctx.textBaseline = "middle";
+                    ctx.shadowColor = "#4f4";
+                    ctx.shadowBlur = 1;
+                    ctx.strokeText(str[i], i * fontSize, fontSize / 2);
+                    ctx.fillStyle = '#4f4';
+                    ctx.fillText(str[i], i * fontSize, fontSize / 2);
+                }
+
+                var animate = function () {
+                    self.drawFlag ^= 1;
+                    if (!self.drawFlag)
+                        self.draw();
+                    requestAnimationFrame(animate);
+                };
+                animate();
+
+            };
+
+            Bling3D.MatrixText.prototype = {
+                draw: function () {
+                    var fontSize = this.fontSize;
+                    var ctx = this.ctx;
+                    ctx.fillStyle = 'rgba(0,0,0, 0.05)';
+                    ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                    var self = this;
+                    this.yPositions.map(function (y, index) {
+                        var x = (index * fontSize);
+                        var sx = Math.floor(Math.random() * self.str.length) * fontSize;
+                        ctx.drawImage(self.charCanvas, sx, 0, fontSize, fontSize, x, y, fontSize, fontSize);
+                        if (y > (self.canvas.height * 0.25) + (Math.random() * 8000)) {
+                            self.yPositions[index] = 0;
+                        } else {
+                            self.yPositions[index] += (fontSize * 0.75);
+                        }
+                    });
+
+                    if (this.canvas.bling3d)
+                        this.canvas.bling3d.refresh();
+                }
+            };
+
+            window.onload = function () {
+                new Bling3D.MatrixText("the-canvas", 12);
+            };
+        </script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+            <div  data-b3d-viewport="wakeTime:30" data-b3d-viewport-input >
+                <span data-b3d-camera="name:'defaultCamera',posTarg:[0.0056,0.3822,2.0345 , 0.6309,0.6375,-0.5606]"></span>
+                <span data-b3d-camera="name:'far',posTarg:[ 0.8592,3.7908,5.8356 , 0.9250,-3.5278,3.8757]"></span>
+                <span data-b3d-light="color:0xcccccc"></span>
+                <span data-b3d-light="type:'directional', color:0x444444, py:100,pz:100" ></span>
+
+                <ul 
+                    data-b3d-path-slider="path:'line',points:[-5,0,0,5,0,0], itemRotation:{y:-90}, moveToPrimary:true"
+                    data-b3d-coverflow            >
+                    <li><img data-b3d-image-tile="originY:-1, frameColor:0x666666,depth:0.04"
+                             data-b3d-as-default                        src="images/matrix/matrix1.jpg"
+                             alt='Image 1'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix-re1.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix-re2.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix-re3.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix-rev1.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/matrix/matrix-rev2.jpg" title='Image 8'></li>
+                </ul>
+
+                <canvas data-b3d-canvas-tile="imageRepeatX:4,imageRepeatY:1,maxWidth:40,maxHeight:10,px:3,py:5,pz:-6.5" id="the-canvas" width="256" height="256" data-b3d-store-in-dom ></canvas>
+
+                <p data-b3d-flat-text="rx:-90,pz:6,py:2, originY:-1,textCanvasScale:1/400,textCanvas:{font:'Menlo-Regular, Droid Sans Mono, monospace', size:32, color:'white',padX:8, padY:8,backColor:'rgba(0,0,0,0.5)'} "
+                   data-b3d-no-reflection>The Matrix is a 1999 American–Australian neo-noir
+science fiction action film written and directed by
+The Wachowski Brothers, starring Keanu Reeves,
+Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving,
+and Joe Pantoliano. It depicts a dystopian future in
+which reality as perceived by most humans is actually
+a simulated reality called "the Matrix", created by
+sentient machines to subdue the human population,
+while their bodies' heat and electrical activity are
+used as an energy source. Computer programmer "Neo"
+learns this truth and is drawn into a rebellion against
+the machines, which involves other people who have been
+freed from the "dream world".
+</p>
+
+                <p   data-b3d-change-camera="name:'defaultCamera'"
+                     data-b3d-flat-text="rx:-90,px:2,pz:6,py:2, originY:-1,textCanvasScale:1/400,textCanvas:{font:'Menlo-Regular, Droid Sans Mono, monospace', weight:'bold', size:80, color:'#ff4444',backColor:'transparent'} "
+                     data-b3d-no-reflection
+                     >BACK</p>
+
+
+                <p  data-b3d-flat-text="pz:1,px:1.4,originY:-1,textCanvasScale:1/400,  textCanvas:{weight:'bold', font:'Menlo-Regular, Droid Sans Mono, monospace', color:'#ff4444', size:50, backColor:'transparent'} "
+                    data-b3d-change-camera="name:'far'">Click for Movie Info</p>
+
+
+                <span 
+                    data-b3d-mirror-floor="src:'images/matrix/floor.png', opacity:0.8, color:'#fff',imageRepeatX:64, imageRepeatY:64">
+                </span>
+
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Canvas Image Source</h1>
+                <p>It is possible to use an HTML5 Canvas as an image source. Using your own Canvas code or other Canvas plugins, you can easily create animations, charts and other effects.</p>
+                <p>Here we have recreated the famous Matrix movies 'code waterfall' effect. The letters are drawn onto a 256 by 256 canvas and slowly erased to create the fading effect.</p>
+                <p>The Canvas is then used as an image source and repeat-tiled over a large area.</p>
+                <p>Clicking 'Click for Movie Info' invokes the camera-change feature.</p>
+                <p>The Matrix ©1999 Warner Bros. Entertainment Inc. ©1999 Village Roadshow Films Limited.</p>
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

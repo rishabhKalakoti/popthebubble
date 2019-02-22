@@ -1,0 +1,68 @@
+
+/* Various styles for the examples . */
+
+body {
+    font-family: arial, sans-serif;
+    color: #444;
+    padding:0px;
+    margin:0px;
+    background-color:#D8914B;
+}
+
+p {
+    line-height: 20px;
+}
+
+code, pre  {
+    color: #00cc00;
+    font-weight: bold;
+
+}
+
+#bottom-area {
+    padding: 0px 20px;
+    clear:both;
+    height:100%;
+    border-top:1px solid #888;
+    border-bottom:1px solid #888;
+    background-color:#fff;
+}
+#bottom-area a {
+    color:#0000ff;
+}
+
+
+/* 'No WebGL' message area. */
+#webgl-message {
+    width:90%;
+    padding-bottom: 43%;
+    height:0px;
+    padding-left:5%;
+    padding-right:5%;
+    color:#fff;
+    background-color: #000;
+    overflow:hidden;
+
+    background: linear-gradient(to bottom, #000000 0%,#666666 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#666666',GradientType=0 ); /* IE6-9 */
+    font-size:20px;   
+    text-align: center;
+}
+
+#webgl-message h1 {
+    color:#ff4433;
+    margin-top:5%;
+}
+
+/* Area for displaying image title in some examples. */
+#image-title-area {
+       position:absolute;
+       left:3%;
+       top:5%;
+       text-shadow: 0px 2px 3px rgba(0,0,0, 0.5);
+       color: #fff;
+       font-family: sans-serif;
+       font-weight: normal;
+       z-index:100;
+       font-size:40px;
+   }

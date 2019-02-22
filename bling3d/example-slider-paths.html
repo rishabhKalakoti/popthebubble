@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Bling3D Path Sliders</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Bling3D.css">
+        <link rel="stylesheet" type="text/css" href="css/example.css">
+        <script type="text/javascript" src="js/Bling3D.js" ></script>
+
+    </head>
+    <body>
+        <div id = "webgl-message" class="bling3d-show-if-not-webgl">
+            <h1>Sorry! No WebGL :-(</h1>
+            <p>This browser doesn't appear to support WebGL.</p>
+            <p>That's ok, Bling3D can display alternative content.</p>
+            <p>It can also trigger alternative JavaScript plugins.</p>
+        </div>  
+
+        <div id="wrap" class="bling3d-show-if-webgl">
+
+
+            <div  data-b3d-viewport data-b3d-viewport-input="composerx:true,clearColor:0x000000" >
+                <span data-b3d-camera ="name:'defaultCamera', posTarg:[1.9147,2.7700,0.6391 , 1.8821,0.4502,-0.8398]"></span>
+                <span data-b3d-light="type:'directional', color:0x444444, px:100,py:100" ></span>
+                <span data-b3d-light="type:'ambient', color:0xcccccc" ></span>
+                <ul data-b3d-path-slider="path:'openCurve',debug:true, points:[-4,0,-6, 0,0,0, 4,0,-1, 8,0,1]">
+                    <li><img data-b3d-image-tile="depth:0.05,frameColor:0xfefefe,originY:-1" data-b3d-as-default src="images/tiles/image1.jpg" title='Image 1'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image2.jpg" title='Image 2'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image3.jpg" title='Image 3' ></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image4.jpg" title='Image 4'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image5.jpg" title='Image 5'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image6.jpg" title='Image 6'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image7.jpg" title='Image 7'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image8.jpg" title='Image 8'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image9.jpg" title='Image 9'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image10.jpg" title='Image 10'></li>
+                    <li><img data-b3d-image-tile src="images/tiles/image11.jpg" title='Image 11'></li>
+                </ul>
+
+                <span data-b3d-mirror-floor="src:'images/floor.png',opacity:0.9, color:0xaaaaaa,imageRepeatX:32, imageRepeatY:32" ></span>
+            </div>
+
+            <div id="bottom-area">  
+                <h1>Path Sliders</h1>
+                <p>Rather than being limited to straight or circular (carousel) sliders , Bling3D sliders can be virtually any shape, with open or closed ends.</p>
+                <p>Here we have just defined four points for an open curve. Bling3D creates a smooth path between the points (shown by the green line).</p> 
+                <p>The camera is placed high up here so you can see the shape of the path, but with more interesting camera angles you can get some impressive looking effects as the items weave around.</p>
+                <p>The default behaviour is for items to face along the path (as shown here), but they can also be rotated to face outwards.</p>
+                <p>&COPY;2016 <a href="http://www.starplugins.com">Star Plugins</a></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
