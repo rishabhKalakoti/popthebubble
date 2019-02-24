@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>TEDx MNIT</title>
+		<meta name="description" content="Official website of TEDx MNIT Jaipur">
+		<meta name="keywords" content="ted,tedx,tedxmnitjaipur,jaipur,mnit,tedxmnit,tedxmnit2019,tedxmnitjaipur2019,2019">
 		<link href='css/layout.css' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 		
@@ -10,16 +12,23 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+				
 		<!--
 		<link rel="stylesheet" type="text/css" href="css/jquery.funnyText.css">
 		<script type="text/javascript" src="scripts/jquery.funnyText.js"></script>
 		-->
 		<link rel="stylesheet" href="bubbles/css/style.css">
-		
-		
+		<!--
+		<style>
+ <span class="metadata-marker" style="display: none;" data-region_tag="css"></span>      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+	-->
 		<script type="text/javascript">
 			var clock;
 
@@ -29,22 +38,11 @@
 					responsiveFallback: 600,
 					loop: false
 				});
-				/*
-				$('.mySelector').funnyText({
-					speed: 600,
-					borderColor: 'yellow',
-					activeColor: 'yellow',
-					color: 'white',
-					fontSize: '3em',
-					direction: 'both'
-				});
-				*/
 			});
 			
 			
 			$(document).ready(function () {
 			  // preloader
-			  
 			  $(window).on("load", function(){
 				$('.preloader').delay(400).fadeOut(500);
 			  })
@@ -211,8 +209,10 @@
 				top: 50%;
 				left: 50%;
 				margin: -40px 0 0 -40px;
-				//background: url('images/132.gif') no-repeat;
 				
+			}
+			nav.header{
+				background-color:black !important;
 			}
 		</style>
 		<div id="big_wrapper">
@@ -238,7 +238,7 @@
 		</nav>
 			<script type='text/javascript'>
 			// Set the date we're counting down to
-			var countDownDate = new Date("Mar 10, 2019 00:00:00").getTime();
+			var countDownDate = new Date("Mar 10, 2019 14:30:00").getTime();
 			var x = setInterval(function() {
 			var now = new Date().getTime();
 			var distance = countDownDate - now;
@@ -247,7 +247,7 @@
 			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-				document.getElementById("clock").innerHTML = "<table cellspacing='2' class='count'><tr><th>" +days+ "<th>:<th>" + hours + "<th>:<th>" + minutes + "<th>:<th>" + seconds + "<tr><td>Days<td> <Td>Hours<td> <Td>Minutes<td> <td>Seconds</table>";
+			document.getElementById("clock").innerHTML = "<table cellspacing='2' class='count'><tr><th>" +days+ "<th>:<th>" + hours + "<th>:<th>" + minutes + "<th>:<th>" + seconds + "<tr><td>Days<td> <Td>Hours<td> <Td>Minutes<td> <td>Seconds</table>";
 			  if (distance < 0) {
 				clearInterval(x);
 				document.getElementById("clock").innerHTML = "THE TIME IS NOW!!!";
@@ -256,11 +256,7 @@
 			</script>
 			<div class="main">
 				<style type='text/css'>
-					@media only screen and (max-width: 700px) {
-					  #timeline {
-						display:none;
-					  }
-					}
+					
 					.box{
 						display:inline-block;
 					}
@@ -273,16 +269,12 @@
 						padding:10px;
 					}
 					.count th{
-						//border-right:1px solid white;
-						//border-left:1px solid white;
 						text-align:center;
-						min-width:60px;
 						font-size:2em;
 						padding:2px;
 						padding-top:6px;
 					}
 					.count td{
-						min-width:60px;
 						margin:2px;
 						text-align:center;
 						font-size:1.0em;
@@ -301,24 +293,26 @@
 					<div class="container" style='z-index:10;'>
 					<div class="" style="width:60%; height:50%; z-index:10;margin:auto;padding:auto;">
 						<div class="">
-							<!--<h6>TEDx MNIT Jaipur</h6>-->
-							<h1 class="text-white" style=''>
-								<font color='red'>TEDx</font> MNIT Jaipur				
+							<!--<h1 class="text-white" style=''>
+								Pop the Bubble
 							</h1>
-								<span style='padding:5px;margin:10px;background-color:#8ab92d;color:white;font-weight:bold;'>Starts in:</span>
+							<h4>Explore the Unseen</h4>
+							-->
+							<img src='images/pop.png' width='60%' style='margin:auto;min-width:200px;'>
+							<br>
+							<span style='padding:5px;margin:10px;background-color:#8ab92d;color:white;font-weight:bold;'>Starts in:</span>
 								<div id="clock" class=""></div>
-							<h4>Date: <span style='color:#8ab92d'>10th March, 2019</span></h4>
-							<h4>Venue: <span style='color:#8ab92d'>Neeti Sabhagar, MNIT Jaipur</span></h4>
+							<h4><span style='color:#8ab92d'><span class='glyphicon glyphicon-calendar'></span> 10th March, 2019</span></h4>
+							<h4><span style='color:#8ab92d'><span class='glyphicon glyphicon-home'></span> Neeti Sabhagaar, MNIT Jaipur</span></h4>
 							
 						</div>											
 					</div>
 				</div>
 				</section>
-				<section id='timeline'>
-					<!--
-					<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1rfkXfAyPkJAZ7LfGTLXYNIU-ko8nI3TqDKyK7jjKKw8&font=Default&lang=en&start_at_end=true&initial_zoom=2&height=500' width='100%' height=500 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>-->
-					<iframe style="margin:0px;" src='timeline.html' width='100%' height='85%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+				<section style='background-color:black;'>
+				<iframe width="100%" height="80%" src="https://time.graphics/embed?v=1&id=231300" frameborder="0" allowfullscreen></iframe>
 				</section>
+
 				<style type="text/css">
 				
 				.ted{
@@ -340,9 +334,9 @@
 				}	
 				</style>
 <section class="theme" style='overflow:auto;'>
-					<div class='container'>
+					<div class='container' style='background-color:black;background-opacity:0.5'>
 					<img src='images/main.jpg' style="float:left;margin:20px;min-width:200px;width:30%;" class='img-responsive'>
-					<h1 class="heading">Theme: Pop the Bubble</h1>
+					<h1 class="heading">Pop the Bubble- Explore the Unseen</h1>
 					<p class='txt'>
 					With the evolution of the earth, the humans have claimed to be the most cerebral species, reasoning their ability to communicate. With this comprehension came a lot of concerns. Not only we were high-grade at formulating our ideas; we ended up inflicting them on the masses. As a result, we have created a bubble around us, made up of prejudices, shortsightedness, uncertainties, vulnerabilities or insecurities. 
 					The youth- often molded or stuffed in a box named prototype is stuck in the never-ending loop of monotony, and we believe it is high time we come out of the clouds which are shrouding us in the darkness of ignorance.
@@ -353,7 +347,29 @@
 					</p>
 					</div>
 				</section>
-
+				<!--
+				<section>
+				<span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>    <h3>My Google Maps Demo</h3>
+				<div id="map"></div>
+				<script>
+			<span class="metadata-marker" style="display: none;" data-region_tag="script-body"></span>// Initialize and add the map
+			function initMap() {
+			  // The location of Uluru
+			  var uluru = {lat: -25.344, lng: 131.036};
+			  // The map, centered at Uluru
+			  var map = new google.maps.Map(
+				  document.getElementById('map'), {zoom: 4, center: uluru});
+			  // The marker, positioned at Uluru
+			  var marker = new google.maps.Marker({position: uluru, map: map});
+			}
+				</script>
+				
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+				</script>
+				</section>
+				-->
+				
 			</div>
 			
 			<div id="footer">

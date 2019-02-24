@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<title>TEDx MNIT</title>
-		
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="jquery.min.js"></script>
@@ -72,6 +73,7 @@
 					  fade: true,
 					  cssEase:'linear',
 					  speed:500,
+					  draggable:true,
 					  lazyLoad:'ondemand'
 					  /*asNavFor: '.slider-nav'*/
 					});
@@ -88,6 +90,27 @@
 				});
 			  </script>
 			  <style>
+			  	p.speaker-text{
+			  		display:block;
+			  		font-size:1em;
+			  	}
+			  	
+			  	img.speaker-big{
+			  		margin:auto;
+			  		display:none;
+			  		width:60%;
+			  		min-width:200px;
+			  	}
+			  	img.speaker-pic{
+			  		width:auto;
+			  		height:250px;
+			  		margin:auto;
+			  	}
+			  	@media only screen and (min-width: 800px) {
+					p.speaker-txt{display:none;}
+					img.speaker-pic{display:none;}
+					img.speaker-big{display:block;}
+				}
 				p.txt{
 					font-family: Montserrat, sans-serif;
 					padding:10px;
@@ -127,11 +150,6 @@
 			  		margin:5px;
 			  		height:20%;
 			  	}
-			  	img.speaker-big{
-			  		margin:auto;
-			  		width:60%;
-			  		min-width:200px;
-			  	}
 			  	img.speaker-small{
 			  		margin:10px;
 			  		float:left;
@@ -144,23 +162,30 @@
 				<div class='speaker-details' style='width:90%;margin:auto; align:center;padding:0px;'>
 					<div class='slider-for'>
 						<div class='slider-content'>
-							<img data-lazy='images/speakers/1.jpeg' alt='speaker1' class='speaker-big img-responsive'><!--
-<p class='txt'>Purvadhanashree has worked for a decade in promoting a rare classical dance of Telegu devdasis, vilasini Natyam which was performed in temples and royal courts. Purvadhanashree is also "TOP grade ” Bharatanatyam artiste of Doordarshan. Sahitya Kala Parishad, Delhi selected Purva under the Young Talent Scholarship in the year 2002. For the achievement in the field of Vilasini Natyam, Central Sangeet Natak Akademi awarded Purvadhanashree the Ustad Bismillah Khan Yuva Puraskar in 2008. She is an impaneled artiste of SPIC MACAY and has been regularly conducting workshops and Lecture demonstrations across the country. In 2015 Bhanja Kala Mandap, Bhubaneshwar honored Purva with the Jayadev Puraskar. And in 2016 she was awarded the Devadasi Sashimani Devi Smriti Puraskar in the 11 the Devadasi National Dance Festival, Bhubaneshwar.</p>-->
+							<img data-lazy='images/speakers/1.jpeg' alt='Purvadhanashree' class='speaker-big img-responsive'>
+							<img data-lazy='images/speakers/p1.jpg' alt='Purvadhanashree' class='speaker-pic img-responsive'>
+							
+<p class='speaker-txt txt'>Purvadhanashree has worked for a decade in promoting a rare classical dance of Telegu devdasis, vilasini Natyam which was performed in temples and royal courts. Purvadhanashree is also "TOP grade ” Bharatanatyam artiste of Doordarshan. Sahitya Kala Parishad, Delhi selected Purva under the Young Talent Scholarship in the year 2002. For the achievement in the field of Vilasini Natyam, Central Sangeet Natak Akademi awarded Purvadhanashree the Ustad Bismillah Khan Yuva Puraskar in 2008. She is an impaneled artiste of SPIC MACAY and has been regularly conducting workshops and Lecture demonstrations across the country. In 2015 Bhanja Kala Mandap, Bhubaneshwar honored Purva with the Jayadev Puraskar. And in 2016 she was awarded the Devadasi Sashimani Devi Smriti Puraskar in the 11 the Devadasi National Dance Festival, Bhubaneshwar.</p>
 						</div>
-						<div class='slider-content'><img data-lazy='images/speakers/2.jpeg' class='speaker-big img-responsive'><!--<p class='txt'>From being an army officer to a successful entrepreneur, Major Vandana Sharma has left no stone unturned. Her service to India by working in the Indian Army for a decade is phenomenal. She has also played a significant role in the Kargil war in 1999. She also realized her affinity towards entrepreneurship. Her project, the StartupPeopleConsulting was established in 2017. It majorly works in helping fresh entrepreneurs with problems they encounter and in offering professional guidance. She directs her works towards women empowerment and also aspires to help the veterans of armed forces.</p>-->
+						<div class='slider-content'><img data-lazy='images/speakers/2.jpeg' class='speaker-big img-responsive' alt='Major Vandana Sharma'>
+						<img data-lazy='images/speakers/p2.jpg' alt='Major Vandana Sharma' class='speaker-pic img-responsive'>
+						<p class='speaker-txt txt'>From being an army officer to a successful entrepreneur, Major Vandana Sharma has left no stone unturned. Her service to India by working in the Indian Army for a decade is phenomenal. She has also played a significant role in the Kargil war in 1999. She also realized her affinity towards entrepreneurship. Her project, the StartupPeopleConsulting was established in 2017. It majorly works in helping fresh entrepreneurs with problems they encounter and in offering professional guidance. She directs her works towards women empowerment and also aspires to help the veterans of armed forces.</p>
 						</div>
-						<div class='slider-content'><img data-lazy='images/speakers/3.jpg' class='speaker-big img-responsive'><!--<p class='txt'>Dr. Abhas Mitra is an Indian astrophysicist who was the former head of the Theoretical Physics section of the Bhabha Atomic Research Centre (BARC), Mumbai. His research papers proved the concept of “Black holes” as illusory. He also exerted that he had solved this paradox long before Stephan Hawking did. His research also proved that the concept of “Dark energy” is delusional. A 90- year old cosmological puzzle was named as “MITRA PARADOX” to honor his work in theoretical physics. He is also an eminent TEDx speaker who has delivered 8 TEDx talks to-date in various reputed institutes. He’s indeed an inspiration to all the young scientists trying to put the name of India high up in the list of scientifically developed countries.</p>--></div>
+						<div class='slider-content'><img data-lazy='images/speakers/3.jpg' class='speaker-big img-responsive' alt='Dr. Abhas Mitra'>
+						<img data-lazy='images/speakers/p3.jpg' alt='Dr. Abhas Mitra' class='speaker-pic img-responsive'>
+						<p class='speaker-txt txt'>Dr. Abhas Mitra is an Indian astrophysicist who was the former head of the Theoretical Physics section of the Bhabha Atomic Research Centre (BARC), Mumbai. His research papers proved the concept of “Black holes” as illusory. He also exerted that he had solved this paradox long before Stephan Hawking did. His research also proved that the concept of “Dark energy” is delusional. A 90- year old cosmological puzzle was named as “MITRA PARADOX” to honor his work in theoretical physics. He is also an eminent TEDx speaker who has delivered 8 TEDx talks to-date in various reputed institutes. He’s indeed an inspiration to all the young scientists trying to put the name of India high up in the list of scientifically developed countries.</p></div>
 						<div class='slider-content'>
-<img  data-lazy='images/speakers/4.jpg' class='speaker-big img-responsive'>
-<!--<p class='txt'>Dr. Pragya Agarwal, a social and creative entrepreneur, has brought honor to her country by being awarded a fellowship of 'Royal Society of Arts' for her work towards gender equality. She is a devoted educator and campaigner for women's rights and has organized the first-ever TEDxWomen conference in the North of the UK, and founder and Licensee of TEDx FombyPointWomen. Ph.D. from the University of Nottinghamshire, Dr. Pragya is a writer for Forbes, Huffington Post, Telegraph and many others and is currently writing a book for Bloomsbury Publications. Featured in The Guardian, Metro, Telegraph, Independent, Glamour Magazine, Stylist Magazine and guest on BBC breakfast and radio four among others, she is one of the 100 most influential women in social enterprise in the UK.</p>-->
+<img  data-lazy='images/speakers/4.jpg' class='speaker-big img-responsive' alt='Dr. Pragya Agarwal'><img data-lazy='images/speakers/p4.jpg' alt='Dr. Pragya Agarwal' class='speaker-pic img-responsive'><p class='speaker-txt txt'>Dr. Pragya Agarwal, a social and creative entrepreneur, has brought honor to her country by being awarded a fellowship of 'Royal Society of Arts' for her work towards gender equality. She is a devoted educator and campaigner for women's rights and has organized the first-ever TEDxWomen conference in the North of the UK, and founder and Licensee of TEDx FombyPointWomen. Ph.D. from the University of Nottinghamshire, Dr. Pragya is a writer for Forbes, Huffington Post, Telegraph and many others and is currently writing a book for Bloomsbury Publications. Featured in The Guardian, Metro, Telegraph, Independent, Glamour Magazine, Stylist Magazine and guest on BBC breakfast and radio four among others, she is one of the 100 most influential women in social enterprise in the UK.</p>
 						</div>
 						
-						<div class='slider-content'><img data-lazy='images/speakers/5.jpg' class='speaker-big img-responsive'>
-						<!--
-						<p class='txt'>Mr. Anubhav Dubey, the co-founder of Chai Sutta Bar, a leading food venture with over 15 outlets and still expanding, is a social entrepreneur. With the extraordinary potential to enter the market with their meager budget socially and environment-friendly start-up, the team of chai sutta bar purposely includes orphans to improve their financial stability and also the lifestyle. Their serving style promotes the use of “Kulhads” and generating a pollution free environment.   Anubhav Dubey has bagged various awards for young entrepreneurs and is currently preparing for UPSC along with managing his business to extend his devotion towards the welfare of the society at a much official position. He was invited to the i5 summit organized as a joint venture by IIT-IIM Indore twice.
-</p>-->
+						<div class='slider-content'><img data-lazy='images/speakers/5.jpg' class='speaker-big img-responsive' alt='Anubhav Dubey'>
+						<img data-lazy='images/speakers/p5.jpg' alt='Anubhav Dubey' class='speaker-pic img-responsive'>
+						
+						<p class='speaker-txt txt'>Mr. Anubhav Dubey, the co-founder of Chai Sutta Bar, a leading food venture with over 15 outlets and still expanding, is a social entrepreneur. With the extraordinary potential to enter the market with their meager budget socially and environment-friendly start-up, the team of chai sutta bar purposely includes orphans to improve their financial stability and also the lifestyle. Their serving style promotes the use of “Kulhads” and generating a pollution free environment.   Anubhav Dubey has bagged various awards for young entrepreneurs and is currently preparing for UPSC along with managing his business to extend his devotion towards the welfare of the society at a much official position. He was invited to the i5 summit organized as a joint venture by IIT-IIM Indore twice.
+</p>
 						</div>
 					</div>
+					<br><br><br><br>
 					<!--
 					<div class='slider-nav'>
 						<div class='nav-content'>

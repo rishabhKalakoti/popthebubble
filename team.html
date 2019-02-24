@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<title>TEDx MNIT</title>
-		
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="jquery.min.js"></script>
@@ -33,7 +34,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span> 
 			  </button>
-			  <a class="navbar-brand" href="home.html"><img src='images/logo.jpg' height=35></a>
+			  <a class="navbar-brand" href="index.html"><img src='images/logo.jpg' height=35></a>
 			</div>
 			<div class=" collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav navbar-right">
@@ -53,12 +54,10 @@
 				.teampic1{
 					width:160px;
 					height:200px;
-					border:1px solid yellow;
 				}
 				.teampic2{
 					width:120px;
 					height:150px;
-					border:1px solid yellow;
 				}
 				.post{
 					color:white;
@@ -76,59 +75,125 @@
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Organiser</h3>
 							  <img class='teampic1' src='images/team/astha.jpg'>
-							  <br><font color='yellow' size='+1'>Astha Mary John</font>
+							  <br><font color='' size='+1'>Astha Mary John</font>
 							  </div>
 							  <div class="col-sm-4 photo_holder">
 							  <h3 class='post'>Co-organiser</h3>
 							  <img class='teampic1' src='images/team/batty.jpg'>
-							  <br><font color='yellow' size='+1'>Rishabh Gupta</font>
+							  <br><font color='' size='+1'>Rishabh Gupta</font>
 							  </div>
 							  <div class="col-sm-2"></div>
 							</div>
 							<br>
 							<br>
-							<div class='container-fluid' style='color: red;'><h2 align='center'>THE HEADS</h2></div>
-							  
-							<div class="row">
+							<div class='container-fluid' style='color: #00FFFF;'><h2 align='center'>THE HEADS</h2></div>
+							 
 							
+							<div class="row" style='width:80%;margin:auto;'>
 							  <div class="photo_holder col-sm-4">
-							  <h3 class='post'>Public relations</h3>
+							  <h3 class='post'>Communications</h3>
 							  <img class='teampic2' src='images/team/gauri.jpg'>
-							  <br><font color='yellow' size='+1'>Gauri Bathla</font>
+							  <br><font color='' size='+1'>Gauri</font>
 							  </div>
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Design</h3>
 							  <img class='teampic2' src='images/team/vaibhav.jpg'>
-							  <br><font color='yellow' size='+1'>Vaibhav Kushwaha</font>
+							  <br><font color='' size='+1'>Vaibhav Kushwaha</font>
 							  </div>
+							 
 							  <div class="photo_holder col-sm-4">
 							  <h3 class='post'>Technical</h3>
 							  <img class='teampic2' src='images/team/percy.jpg'>
-							  <br><font color='yellow' size='+1'>Rishabh Kalakoti</font>
+							  <br><font color='' size='+1'>Rishabh Kalakoti</font>
 							  </div>
 							</div>
 					</div>
 					<script type="text/javascript">
 						$(document).ready(function(){
-							$('.slider').slick({
+							$('.executives').slick({
 							  infinite: true,
 							  arrows: true,
 							  lazyLoad: 'ondemand',
 							  slidesToShow: 4,
-							  slidesToScroll: 4
+							  slidesToScroll: 4,
+							  responsive: [
+								{
+								  breakpoint: 1024,
+								  settings: {
+									slidesToShow: 3,
+									slidesToScroll: 3,
+									infinite: true,
+									dots: true
+								  }
+								},
+								{
+								  breakpoint: 600,
+								  settings: {
+									slidesToShow: 2,
+									slidesToScroll: 2
+								  }
+								},
+								{
+								  breakpoint: 480,
+								  settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1
+								  }
+								}
+								// You can unslick at a given breakpoint now by adding:
+								// settings: "unslick"
+								// instead of a settings object
+							  ]
+							});
+							$('.volunteers').slick({
+							  infinite: true,
+							  arrows: true,
+							  lazyLoad: 'ondemand',
+							  slidesToShow: 4,
+							  slidesToScroll: 4,
+							  responsive: [
+								{
+								  breakpoint: 1024,
+								  settings: {
+									slidesToShow: 3,
+									slidesToScroll: 3,
+									infinite: true,
+									dots: true
+								  }
+								},
+								{
+								  breakpoint: 600,
+								  settings: {
+									slidesToShow: 2,
+									slidesToScroll: 2
+								  }
+								},
+								{
+								  breakpoint: 480,
+								  settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1
+								  }
+								}
+								// You can unslick at a given breakpoint now by adding:
+								// settings: "unslick"
+								// instead of a settings object
+							  ]
 							});
 						});
 					  </script>
-					  <div class='container-fluid' style='color: red;'><h2 align='center'>EXECUTIVES</h2></div>
+					  <br>
+					  <div class='container-fluid' style='color: #00FFFF;'><h2 align='center'>EXECUTIVES</h2></div>
+					  <br>
 					<style>
-						.slider{
+						.executives, .volunteers{
 							width:60%; margin:auto;
 						}
 						.nav-content{
 							text-align:center;
 						}
 						.exec-photo{
-							margin:auto;
+							margin:auto !important;
 							clear:both;
 							height:150px;
 							width:120px;
@@ -136,60 +201,93 @@
 							border:1px solid white;
 						}
 					</style>
-					<div class='slider'>
+					<div class='executives'>
 						<div class='nav-content'>
 							<img class=' exec-photo' src='images/team/nandini.jpg'>
 							Nandini Agarwal
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/pratibha.jpg'>
+							<img class='img-responsive exec-photo' src='images/team/pratibha.jpg' alt='Pratibha'>
 							Pratibha Yadav
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/ekansh.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/ekansh.jpg' alt='Ekansh'>
 							Ekansh Choudhary
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/shubham.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/shubham.jpg' alt='Shubham'>
 							Shubham Jajoo
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/anand.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/anand.jpg' alt='Anand'>
 							Anand
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/parag.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/septa.jpg' alt='S Saptagirish'>
+							S Saptagirish
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/parag.jpg' alt='Parag'>
 							Parag
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/aruthra.jpg' alt='ex1'>
-							Aruthra
-						</div>
-						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/yash.jpg' alt='ex1'>
-							Yash
-						</div>
-						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/ayushman.jpg' alt='ex1'>
-							Ayushman
-						</div>
-						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/kartikey.jpg' alt='ex1'>
-							Kartikey
-						</div>
-						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/jayant.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/jayant.jpg' alt='Jayant'>
 							Jayant
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/pranshu.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/harsh.jpg' alt='Harsh'>
+							Harsh
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/vasu.jpg' alt='Vasu'>
+							Vasu
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/vaibhav1.jpg' alt='Vaibhav'>
+							Vaibhav
+						</div>
+					</div>
+					<Br>
+					<div class='container-fluid' style='color: #00FFFF;'><h2 align='center'>VOLUNTEERS</h2></div>
+					<br>
+					<div class='volunteers'>
+						
+						
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/aruthra.jpg' alt='Aruthra'>
+							Aruthra
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/yash.jpg' alt='Yash'>
+							Yash
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/ayushman.jpg' alt='Ayushman'>
+							Ayushman
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/kartikey.jpg' alt='Kartikey'>
+							Kartikey
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/pranshu.jpg' alt='Pranshu'>
 							Pranshu
 						</div>
 						<div class='nav-content'>
-							<img class='img-responsive exec-photo' src='images/team/monarch.jpg' alt='ex1'>
+							<img class='img-responsive exec-photo' src='images/team/monarch.jpg' alt='Monarch'>
 							Monarch
 						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/raghavendra.jpg' alt='Raghavendra'>
+							Raghavendra
+						</div>
+						<div class='nav-content'>
+							<img class='img-responsive exec-photo' src='images/team/khushboo.jpg' alt='Khushboo'>
+							Khushboo
+						</div>
 					</div>
+					<br>
+					<div style='font-size:1.2em;'><span class='glyphicon glyphicon-envelope'></span> tedxmnitjaipur@gmail.com &nbsp;&nbsp;&nbsp;&nbsp;  <span class='glyphicon glyphicon-earphone'></span> 8989477111, 8777271728</div>
 					<br><br><br><br>
 			</div>
 			
