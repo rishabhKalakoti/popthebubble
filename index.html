@@ -1,34 +1,26 @@
-<!doctype html>
 <html>
 	<head>
 		<title>TEDx MNIT</title>
 		<meta name="description" content="Official website of TEDx MNIT Jaipur">
-		<meta name="keywords" content="ted,tedx,tedxmnitjaipur,jaipur,mnit,tedxmnit,tedxmnit2019,tedxmnitjaipur2019,2019">
+		<meta name="keywords" content="ted,tedx,tedxmnitjaipur,jaipur,website, tedxmni website, tedxmnitjaipur website,mnit,tedxmnit,tedxmnit2019,tedxmnitjaipur2019,2019">
 		<link href='css/layout.css' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-		
+		<META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<!--
 		<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 		<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
-				
+		-->	
 		<!--
 		<link rel="stylesheet" type="text/css" href="css/jquery.funnyText.css">
 		<script type="text/javascript" src="scripts/jquery.funnyText.js"></script>
 		-->
 		<link rel="stylesheet" href="bubbles/css/style.css">
-		<!--
-		<style>
- <span class="metadata-marker" style="display: none;" data-region_tag="css"></span>      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-    </style>
-	-->
+		
+	
 		<script type="text/javascript">
 			var clock;
 
@@ -49,8 +41,65 @@
 			 
 			})
 		</script>
+		<!--maps-->		
+		<style>
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+
 	</head>
 	<body>
+	
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <span style='font-size:1.6em;' class="modal-title">Location:</span>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span><h4>Neeti Sabhagar, II Floor, Prabha Bhawan, MNIT</h4>
+		<!--The div element for the map -->
+		<div id="map"></div>
+		<script type='text/javascript'>
+		// Initialize and add the map
+	function initMap() {
+	  // The location of place
+	  // 26.8639° N, 75.8107° E
+	  var place = {lat: 26.8639, lng: 75.8107};
+	  // The map, centered at place
+	  var map = new google.maps.Map(
+		  document.getElementById('map'), {zoom: 16, center: place});
+	  // The marker, positioned at place
+	  var marker = new google.maps.Marker({position: place, map: map});
+	}
+		</script>
+		<!--Load the API from the specified URL
+		* The async attribute allows the browser to render the page while the API loads
+		* The key parameter will contain your own API key (which is not needed for this tutorial)
+		* The callback parameter executes the initMap() function
+		-->
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe3xT3Ct6C1nsbvMHkZN-NBRfixJww2uA&callback=initMap">
+		</script>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 	<div class="bubbles"></div>
 <script  src="bubbles/js/index.js"></script>
 		<div class="preloader">
@@ -191,6 +240,12 @@
 </div>
 		
 		<style type='text/css'>
+			body{
+				background-color:black!important;
+			}
+			nav.header{
+				position:fixed;
+			}
 			.preloader{
 				position: fixed;
 				top:0;
@@ -232,6 +287,7 @@
 				<li><a href="speakers.html">Speakers</a></li> 
 				<li><a href="team.html">Team</a></li> 
 				<li><a href="about.html">About</a></li>
+				<li><a style='background-color:#8ab92d;color:white;' href="https://goo.gl/forms/mQI4I9SseaH8bTou1" target='_blank'>Get Ticket</a></li>
 			  </ul>
 			</div>
 		  </div>
@@ -285,32 +341,41 @@
 						background-repeat:no-repeat;
 						background-size:auto;
 						vertical-align:center;
-						padding-top:10%;
+						padding-top:20vh;
+						height:100vh;
 					}
 				</style>
 				<section class="countdown" width="100%">
 					
 					<div class="container" style='z-index:10;'>
-					<div class="" style="width:60%; height:50%; z-index:10;margin:auto;padding:auto;">
+					<div class="" style=" height:50%; z-index:10;margin:auto;padding:auto;">
 						<div class="">
-							<!--<h1 class="text-white" style=''>
-								Pop the Bubble
-							</h1>
-							<h4>Explore the Unseen</h4>
-							-->
-							<img src='images/pop.png' width='60%' style='margin:auto;min-width:200px;'>
-							<br>
+							<img src='images/pop.png' width='40%' style='margin:auto;min-width:300px;'>
+							<div style='width:70%;margin:auto;'>
 							<span style='padding:5px;margin:10px;background-color:#8ab92d;color:white;font-weight:bold;'>Starts in:</span>
 								<div id="clock" class=""></div>
 							<h4><span style='color:#8ab92d'><span class='glyphicon glyphicon-calendar'></span> 10th March, 2019</span></h4>
-							<h4><span style='color:#8ab92d'><span class='glyphicon glyphicon-home'></span> Neeti Sabhagaar, MNIT Jaipur</span></h4>
-							
+							<h4 style='cursor:hand;' data-toggle='modal' data-target='#myModal'><span data-placement='right' data-toggle='tooltip' title='Click for map' style='color:#8ab92d'><span class='glyphicon glyphicon-home'></span> Neeti Sabhagaar, MNIT Jaipur</span></h4>
+							<script>
+							$(document).ready(function(){
+							  $('[data-toggle="tooltip"]').tooltip();
+							});
+							</script>
+							<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+							  Locate on map
+							</button></h4>-->
+							<!-- AIzaSyBe3xT3Ct6C1nsbvMHkZN-NBRfixJww2uA -->
+							<div class="alert alert-success alert-dismissible" style='width:auto;'>
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>News!</strong> The tickets are out for sale!
+</div>
+					</div>
 						</div>											
 					</div>
 				</div>
 				</section>
-				<section style='background-color:black;'>
-				<iframe width="100%" height="80%" src="https://time.graphics/embed?v=1&id=231300" frameborder="0" allowfullscreen></iframe>
+				<section style='height:400px;background-color:black;'>
+				<iframe width="100%" height="100%" src="https://time.graphics/embed?v=1&id=231300" frameborder="0" allowfullscreen></iframe>
 				</section>
 
 				<style type="text/css">
@@ -334,6 +399,7 @@
 				}	
 				</style>
 <section class="theme" style='overflow:auto;'>
+<Br><Br>
 					<div class='container' style='background-color:black;background-opacity:0.5'>
 					<img src='images/main.jpg' style="float:left;margin:20px;min-width:200px;width:30%;" class='img-responsive'>
 					<h1 class="heading">Pop the Bubble- Explore the Unseen</h1>
@@ -347,28 +413,6 @@
 					</p>
 					</div>
 				</section>
-				<!--
-				<section>
-				<span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>    <h3>My Google Maps Demo</h3>
-				<div id="map"></div>
-				<script>
-			<span class="metadata-marker" style="display: none;" data-region_tag="script-body"></span>// Initialize and add the map
-			function initMap() {
-			  // The location of Uluru
-			  var uluru = {lat: -25.344, lng: 131.036};
-			  // The map, centered at Uluru
-			  var map = new google.maps.Map(
-				  document.getElementById('map'), {zoom: 4, center: uluru});
-			  // The marker, positioned at Uluru
-			  var marker = new google.maps.Marker({position: uluru, map: map});
-			}
-				</script>
-				
-				<script async defer
-				src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-				</script>
-				</section>
-				-->
 				
 			</div>
 			
